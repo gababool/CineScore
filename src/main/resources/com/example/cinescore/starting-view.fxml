@@ -6,21 +6,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.LoginViewController">
+<AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.LoginViewController">
     <children>
-        <TextField fx:id="usernameField" layoutX="371.0" layoutY="233.0" promptText="Username" />
-        <TextField fx:id="passwordField" layoutX="371.0" layoutY="265.0" promptText="Password" />
-        <Button fx:id="createAccountButton" layoutX="399.0" layoutY="388.0" mnemonicParsing="false" text="Create Account" />
-        <Label fx:id="createAccountLabel" layoutX="399.0" layoutY="356.0" text="Not yet registered?" />
-        <Label fx:id="titleLabel" layoutX="297.0" layoutY="14.0" text="CineScore">
+        <TextField fx:id="usernameField" layoutX="121.0" layoutY="212.0" promptText="Username" />
+        <TextField fx:id="passwordField" layoutX="120.0" layoutY="244.0" promptText="Password" />
+        <Button fx:id="createAccountButton" layoutX="149.0" layoutY="380.0" mnemonicParsing="false" text="Create Account" />
+        <Label fx:id="createAccountLabel" layoutX="148.0" layoutY="354.0" text="Not yet registered?" />
+        <Label fx:id="titleLabel" layoutX="47.0" layoutY="57.0" text="CineScore">
          <font>
             <Font size="70.0" />
          </font></Label>
-        <Label fx:id="subtitleLabel" layoutX="303.0" layoutY="100.0" text="Rate your favorite shows and movies!">
+        <Label fx:id="subtitleLabel" layoutX="53.0" layoutY="143.0" text="Rate your favorite shows and movies!">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Button fx:id="loginButton" layoutX="371.0" layoutY="307.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Login" />
+      <Button fx:id="loginButton" layoutX="120.0" layoutY="285.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Login" />
     </children>
 
 </AnchorPane>
