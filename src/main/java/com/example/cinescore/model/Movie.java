@@ -1,4 +1,6 @@
 package com.example.cinescore.model;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 }

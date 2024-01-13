@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.StartingViewController">
+<AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.StartingViewController">
     <children>
         <TextField fx:id="usernameField" layoutX="121.0" layoutY="212.0" promptText="Username" />
         <TextField fx:id="passwordField" layoutX="120.0" layoutY="244.0" promptText="Password" />
-        <Button fx:id="createAccountButton" layoutX="149.0" layoutY="380.0" mnemonicParsing="false" text="Create Account" />
+        <Button fx:id="createAccountButton" layoutX="149.0" layoutY="380.0" mnemonicParsing="false" onAction="#newUser" text="Create Account" />
         <Label fx:id="createAccountLabel" layoutX="148.0" layoutY="354.0" text="Not yet registered?" />
         <Label fx:id="titleLabel" layoutX="47.0" layoutY="57.0" text="CineScore">
          <font>

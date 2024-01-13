@@ -22,4 +22,8 @@ public class StartingViewController {
     public void loginUser(ActionEvent event) throws IOException {
         switcher.switchToMain(event);
     }
+
+    public void newUser(ActionEvent event) throws IOException{
+        switcher.switchToCreateAccount(event);
+    }
 }

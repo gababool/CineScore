@@ -35,4 +35,9 @@ public class SceneSwitcher {
         switcher.prepareScene(event, root, filePath);
     }
 
+    public void switchToCreateAccount(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/create-account-view.fxml";
+        switcher.prepareScene(event, root, filepath);
+    }
+
 }
