@@ -1,7 +1,6 @@
-module com.example.ratingsapp {
+module com.example.cinescore {
     requires javafx.controls;
     requires javafx.fxml;
-
 
     opens com.example.cinescore to javafx.fxml;
     exports com.example.cinescore;

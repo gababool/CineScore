@@ -1,12 +1,13 @@
 package com.example.cinescore.controller;
 
-import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class LoginViewController {
+import java.io.IOException;
 
+public class StartingViewController {
     public TextField usernameField;
     public TextField passwordField;
     public Button createAccountButton;
@@ -14,4 +15,11 @@ public class LoginViewController {
     public Label titleLabel;
     public Label subtitleLabel;
     public Button loginButton;
+
+    private static final SceneSwitcher switcher = new SceneSwitcher();
+
+
+    public void loginUser(ActionEvent event) throws IOException {
+        switcher.switchToMain(event);
+    }
 }
