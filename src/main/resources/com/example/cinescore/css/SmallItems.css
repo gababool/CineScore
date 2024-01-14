@@ -24,3 +24,26 @@
     -fx-font-size: 24px;
 }
 
+/* Apply the style to the entire TableView */
+.table-view {
+    -fx-text-fill: #2E0854;
+    -fx-font-family: "Eras Demi ITC";
+        -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eb2fb9 0.0%, #efbaf5 100.0%);
+}
+
+/* Apply the style to the Ta    bleHeaderRow */
+.table-view .column-header {
+    -fx-background-color: #2E0854;
+    -fx-text-fill: #2E0854; /* Set the text color for column headers */
+}
+
+/* Apply the style to the TableHeaderCell (individual column header) */
+.table-view .column-header .label {
+    -fx-text-fill: #efbaf5; /* Set the text color for individual column headers */
+}
+
+/* Apply the style to the TableView cells */
+.table-cell {
+    -fx-text-fill: #2E0854;
+    -fx-font-family: "Eras Demi ITC";
+}

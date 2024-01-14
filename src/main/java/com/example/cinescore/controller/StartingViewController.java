@@ -14,6 +14,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class StartingViewController {
     @FXML private TextField usernameField;
@@ -45,9 +46,8 @@ public class StartingViewController {
 
     @FXML
     public void handleKeyPress(KeyEvent event){
-        switch(event.getCode()){
-            case ENTER: loginButton.fire();
-            case ESCAPE: Platform.exit();
+        if (Objects.requireNonNull(event.getCode()) == KeyCode.ENTER) {
+            loginButton.fire();
         }
     }
 }
