@@ -4,11 +4,14 @@ import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.CineScore;
 import com.example.cinescore.model.User;
 import com.example.cinescore.model.UserManager;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
 
@@ -38,5 +41,13 @@ public class StartingViewController {
 
     public void newUser(ActionEvent event) throws IOException{
         switcher.switchToCreateAccount(event);
+    }
+
+    @FXML
+    public void handleKeyPress(KeyEvent event){
+        switch(event.getCode()){
+            case ENTER: loginButton.fire();
+            case ESCAPE: Platform.exit();
+        }
     }
 }
