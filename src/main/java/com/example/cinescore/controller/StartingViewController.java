@@ -18,7 +18,6 @@ public class StartingViewController {
 
     private static final SceneSwitcher switcher = new SceneSwitcher();
 
-
     public void loginUser(ActionEvent event) throws IOException {
         switcher.switchToMain(event);
     }
