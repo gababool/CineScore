@@ -15,7 +15,6 @@ public class SceneSwitcher {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private static final SceneSwitcher switcher = new SceneSwitcher();
 
     public SceneSwitcher(){}
 
@@ -32,12 +31,17 @@ public class SceneSwitcher {
 
     public void switchToMain(ActionEvent event) throws IOException {
         String filePath = "/com/example/cinescore/main-view.fxml";
-        switcher.prepareScene(event, root, filePath);
+        prepareScene(event, root, filePath);
     }
 
     public void switchToCreateAccount(ActionEvent event) throws IOException{
         String filepath = "/com/example/cinescore/create-account-view.fxml";
-        switcher.prepareScene(event, root, filepath);
+        prepareScene(event, root, filepath);
+    }
+
+    public void switchToStartingView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/starting-view.fxml";
+        prepareScene(event, root, filepath);
     }
 
 }

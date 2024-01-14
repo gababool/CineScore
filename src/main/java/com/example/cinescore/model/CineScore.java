@@ -4,19 +4,22 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class CineScore implements Serializable {
-    HashMap<String, User> users;
-    HashMap<String, Movie> movies;
-    HashMap<String, Show> shows;
+    private HashMap<String, User> users;
+    private HashMap<String, Movie> movies;
+    private  HashMap<String, Show> shows;
+    private String name;
 
-    public CineScore(){
+    public CineScore(String name){
         this.users = new HashMap<>();
         this.movies = new HashMap<>();
         this.shows = new HashMap<>();
+        this.name = name;
     }
+    public CineScore(){};
 
-    public User createUser(String username, String password) throws Exception {
+    public User createUser(String username, String email, String password) throws Exception {
         if(users.containsKey(username)){throw new Exception("Username is taken");}
-        User newUser = new User(username, password);
+        User newUser = new User(username, email, password);
         users.put(username, newUser);
         return newUser;
     }

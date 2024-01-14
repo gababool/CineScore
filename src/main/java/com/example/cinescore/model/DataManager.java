@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class DataManager {
-    private static final String FILE_PATH = "com/example/cinescore/data/data.json";
+    private static final String FILE_PATH = "src/main/java/com/example/cinescore/data/data.json";
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static void saveState(CineScore cineScore) {

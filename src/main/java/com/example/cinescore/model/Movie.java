@@ -1,6 +1,7 @@
 package com.example.cinescore.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.UUID;
 
 
@@ -11,6 +12,7 @@ public class Movie implements Serializable {
     String director;
     int releaseYear;
     int length;
+    ArrayList<Integer> ratings;
 
     public Movie(String title, String director, int releaseYear, int length){
         this.movieId = UUID.randomUUID();
@@ -18,5 +20,6 @@ public class Movie implements Serializable {
         this.director = director;
         this.releaseYear = releaseYear;
         this.length = length;
+        this.ratings = new ArrayList<>();
     }
 }

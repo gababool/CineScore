@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/UserManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/CreateAccountViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/CreateAccountViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/SceneSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/SceneSwitcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/create-account-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/create-account-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/starting-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/starting-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +68,7 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.39885056",
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
@@ -88,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705151798714</updated>
       <workItem from="1705151799772" duration="8895000" />
-      <workItem from="1705235092890" duration="10092000" />
+      <workItem from="1705235092890" duration="17695000" />
     </task>
     <servers />
   </component>

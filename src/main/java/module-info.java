@@ -8,4 +8,5 @@ module com.example.cinescore {
     exports com.example.cinescore;
     exports com.example.cinescore.controller;
     opens com.example.cinescore.controller to javafx.fxml;
+    opens com.example.cinescore.model to com.fasterxml.jackson.databind;
 }

@@ -7,15 +7,19 @@ public class User implements Serializable {
 
     String username;
     String password;
+    String email;
     ArrayList<Movie> ratedMovies;
     ArrayList<Show> ratedShows;
 
-    public User(String username, String password){
+    public User(String username, String email, String password){
         this.username = username;
         this.password = password;
+        this.email = email;
         this.ratedMovies = new ArrayList<>();
         this.ratedShows = new ArrayList<>();
     }
+
+    public User(){};
 
     public String getUsername() {
         return username;
