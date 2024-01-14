@@ -13,6 +13,7 @@ public class Movie implements Serializable {
     int releaseYear;
     int length;
     ArrayList<Integer> ratings;
+    ArrayList<String> reviews;
 
     public Movie(String title, String director, int releaseYear, int length){
         this.movieId = UUID.randomUUID();
@@ -21,5 +22,6 @@ public class Movie implements Serializable {
         this.releaseYear = releaseYear;
         this.length = length;
         this.ratings = new ArrayList<>();
+        this.reviews = new ArrayList<>();
     }
 }

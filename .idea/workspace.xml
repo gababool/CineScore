@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/css/SmallItems.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/css/SmallItems.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <updated>1705151798714</updated>
       <workItem from="1705151799772" duration="8895000" />
       <workItem from="1705235092890" duration="20749000" />
-      <workItem from="1705263290330" duration="2983000" />
+      <workItem from="1705263290330" duration="3810000" />
     </task>
     <servers />
   </component>
