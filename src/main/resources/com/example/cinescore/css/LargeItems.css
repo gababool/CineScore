@@ -1,0 +1,12 @@
+
+#titleLabel{
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efbaf5 0.0%, #eb2fb9 100.0%);
+    -fx-font-family: "Niagara Engraved";
+    -fx-font-size: 135px;
+}
+
+.label{
+    -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efbaf5 0.0%, #eb2fb9 100.0%);
+    -fx-font-family: "Eras Demi ITC";
+}
+

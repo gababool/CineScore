@@ -1,0 +1,26 @@
+.button{
+    -fx-background-color:  #2E0854;
+    -fx-font-family: "Eras Demi ITC";
+    -fx-text-fill: #efbaf5;
+    -fx-font-size: 16px;
+}
+
+.button:hover{
+    -fx-text-fill: #8A2BE2;
+}
+
+.label{
+    -fx-text-fill: #efbaf5;
+    -fx-font-family: "Eras Demi ITC";
+}
+
+.text-field{
+    -fx-font-family: "Eras Demi ITC";
+    -fx-font-size: 24px;
+}
+
+.password-field{
+    -fx-font-family: "Eras Demi ITC";
+    -fx-font-size: 24px;
+}
+

@@ -14,7 +14,7 @@ public class CineScoreApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(CineScoreApp.class.getResource("starting-view.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
-        stage.setTitle("CineScore: Rate your favorite shows and movies!");
+        stage.setTitle("CineScore");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
