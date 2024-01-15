@@ -1,6 +1,7 @@
 package com.example.cinescore.controller;
 
 import com.example.cinescore.model.Movie;
+import com.example.cinescore.model.Show;
 import com.example.cinescore.model.User;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
@@ -24,15 +25,16 @@ public class MainViewController implements Initializable {
     public Button rateMovieMenuButton;
     public Button rateShowMenuButton;
     public Tab movieTab;
-    public TableView movieResultsTable;
-    public TableColumn movieTitleColumn;
-    public TableColumn movieAvgRatingColumn;
-    public TableColumn myMovieRatingColumn;
+    public TableView<Movie> movieResultsTable;
+    public TableColumn<Movie, String> movieTitleColumn;
+    public TableColumn<Movie, String> directorColumn;
+    public TableColumn<Movie, Integer> movieAvgRatingColumn;
+    public TableColumn<Movie, Integer> myMovieRatingColumn;
     public Tab showTab;
-    public TableView showResultsTable;
-    public TableColumn showTitleColumn;
-    public TableColumn avgShowRatingColumn;
-    public TableColumn myShowRatingColumn;
+    public TableView<Show> showResultsTable;
+    public TableColumn<Show, String> showTitleColumn;
+    public TableColumn<Show, Integer> avgShowRatingColumn;
+    public TableColumn<Show, Integer> myShowRatingColumn;
     public Button goToMediaPageButton;
 
     @Override

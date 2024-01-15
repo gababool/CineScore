@@ -43,9 +43,10 @@
                      <children>
                         <TableView fx:id="movieResultsTable" prefHeight="272.0" prefWidth="455.0" stylesheets="@css/SmallItems.css">
                           <columns>
-                            <TableColumn fx:id="movieTitleColumn" editable="false" prefWidth="231.0" resizable="false" text="Title" />
-                              <TableColumn fx:id="movieAvgRatingColumn" editable="false" prefWidth="103.0" resizable="false" text="Avg. Rating" />
-                              <TableColumn fx:id="myMovieRatingColumn" editable="false" prefWidth="120.0" resizable="false" text="My Rating" />
+                            <TableColumn fx:id="movieTitleColumn" editable="false" prefWidth="138.0" resizable="false" text="Title" />
+                              <TableColumn fx:id="directorColumn" editable="false" prefWidth="159.0" resizable="false" text="Director" />
+                              <TableColumn fx:id="movieAvgRatingColumn" editable="false" prefWidth="83.0" resizable="false" text="Avg. Rating" />
+                              <TableColumn fx:id="myMovieRatingColumn" editable="false" minWidth="1.0" prefWidth="74.0" resizable="false" text="My Rating" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
