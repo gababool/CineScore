@@ -12,7 +12,6 @@ public class Movie implements Serializable, Media {
     String title;
     String director;
     int releaseYear;
-    int length;
     ArrayList<Integer> ratings;
     ArrayList<String> reviews;
 
@@ -54,10 +53,6 @@ public class Movie implements Serializable, Media {
         return releaseYear;
     }
 
-    public int getLength() {
-        return length;
-    }
-
     public ArrayList<Integer> getRatings() {
         return ratings;
     }
@@ -83,6 +78,7 @@ public class Movie implements Serializable, Media {
         return user.getMovieRating(this.movieId);
     }
 
+    // Fix code duplication here!
     public static String generateMovieId(String title, String director, int releaseYear){
         StringBuilder output = new StringBuilder();
         char[] titleArray = title.toCharArray();
@@ -106,4 +102,4 @@ public class Movie implements Serializable, Media {
     public void addRatingScore(int score){
         ratings.add(score);
     }
-}
+    }
