@@ -1,3 +1,4 @@
 .root{
-    -fx-background-color: linear-gradient(to bottom, #23274c, #4e225d)
+    -fx-background-color: linear-gradient(to bottom, #23274c, #4e225d);
+    -fx-focus-color: transparent;
 }

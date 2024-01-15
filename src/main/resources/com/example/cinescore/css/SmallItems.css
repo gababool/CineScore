@@ -85,3 +85,5 @@
 .tab-header-background{
     -fx-background-color: #efbaf5;
 }
+
+.root { -fx-focus-color: transparent; }
