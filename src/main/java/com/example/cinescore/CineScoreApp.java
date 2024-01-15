@@ -30,8 +30,11 @@ public class CineScoreApp extends Application {
     }
 
     public static void main(String[] args) {
-        cineScore = DataManager.loadState();
-        UserManager.getInstance();
+        UserManager userManager = UserManager.getInstance();
+        cineScore = new CineScore("cineScore");
+
+        // userManager = DataManager.loadUsers();
+        // cineScore = DataManager.loadMedia();
         launch();
     }
 }

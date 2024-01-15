@@ -1,7 +1,11 @@
 package com.example.cinescore.model;
 
-public class UserManager {
+import java.io.Serializable;
+import java.util.HashMap;
+
+public class UserManager implements Serializable {
     private static UserManager instance;
+    private static HashMap<String, User> users = new HashMap<>();
     private User currentUser;
 
     private UserManager() {}
@@ -17,7 +21,19 @@ public class UserManager {
         return currentUser;
     }
 
+    public User getUser(String username){
+        return users.get(username);
+    }
+
     public void setCurrentUser(User user) {
         this.currentUser = user;
+    }
+
+    public static HashMap<String, User> getUsers() {
+        return users;
+    }
+
+    public void addUser(User user){
+        users.put(user.getUsername(), user);
     }
 }

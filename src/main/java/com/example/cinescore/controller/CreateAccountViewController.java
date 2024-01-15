@@ -4,6 +4,7 @@ import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.CineScore;
 import com.example.cinescore.model.DataManager;
 import com.example.cinescore.model.User;
+import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,7 +31,8 @@ public class CreateAccountViewController {
         try {
             user = cineScore.createUser(username, email, password);
             switcher.switchToStartingView(event);
-            DataManager.saveState(cineScore);
+            DataManager.saveUsers(UserManager.getInstance());
+            DataManager.saveMedia(cineScore);
         } catch (Exception e) {
             e.printStackTrace();
         }
