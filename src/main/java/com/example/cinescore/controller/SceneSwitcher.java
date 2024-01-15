@@ -12,14 +12,14 @@ import java.io.IOException;
 
 public class SceneSwitcher {
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+    private static Stage stage;
+    private static Scene scene;
+    private static Parent root;
 
     public SceneSwitcher(){}
 
-    private void prepareScene(ActionEvent event, Parent root, String filePath) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(filePath));
+    private static void prepareScene(ActionEvent event, Parent root, String filePath) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SceneSwitcher.class.getResource(filePath));
         root = fxmlLoader.load();
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -29,18 +29,33 @@ public class SceneSwitcher {
         stage.centerOnScreen();
     }
 
-    public void switchToMain(ActionEvent event) throws IOException {
+    public static void switchToMain(ActionEvent event) throws IOException {
         String filePath = "/com/example/cinescore/main-view.fxml";
         prepareScene(event, root, filePath);
     }
 
-    public void switchToCreateAccount(ActionEvent event) throws IOException{
+    public static void switchToCreateAccount(ActionEvent event) throws IOException{
         String filepath = "/com/example/cinescore/create-account-view.fxml";
         prepareScene(event, root, filepath);
     }
 
-    public void switchToStartingView(ActionEvent event) throws IOException{
+    public static void switchToStartingView(ActionEvent event) throws IOException{
         String filepath = "/com/example/cinescore/starting-view.fxml";
+        prepareScene(event, root, filepath);
+    }
+
+    public static void switchToRateMovieView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/rate-movie-view.fxml";
+        prepareScene(event, root, filepath);
+    }
+
+    public static void switchToRateShowView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/rate-show-view.fxml";
+        prepareScene(event, root, filepath);
+    }
+
+    public static void switchToMyRatingsView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/my-ratings-view.fxml";
         prepareScene(event, root, filepath);
     }
 

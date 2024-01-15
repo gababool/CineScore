@@ -41,14 +41,18 @@
             <Font name="Eras Demi ITC" size="12.0" />
          </font>
       </CheckBox>
-      <Button fx:id="rateMenuButton" layoutX="-9.0" layoutY="203.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Rate a movie or TV-series">
+      <Button fx:id="rateMovieMenuButton" layoutX="-9.0" layoutY="203.0" mnemonicParsing="false" onAction="#goToRateMovie" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Rate Movie">
          <font>
             <Font size="38.0" />
          </font>
       </Button>
-      <Button fx:id="myRatingsMenuButton" layoutX="-9.0" layoutY="286.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="My Ratings" />
-      <Button fx:id="watchlistMenuButton" layoutX="-9.0" layoutY="368.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Watchlist" />
-      <Button fx:id="logoutButton" layoutX="-9.0" layoutY="451.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Log Out" />
+      <Button fx:id="myRatingsMenuButton" layoutX="-9.0" layoutY="368.0" mnemonicParsing="false" onAction="#goToMyRatings" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="My Ratings" />
+      <Button fx:id="watchlistMenuButton" layoutX="-9.0" layoutY="451.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Watchlist" />
       <Button fx:id="searchButton" layoutX="716.0" layoutY="233.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="64.0" stylesheets="@css/SmallItems.css" text="Enter" />
+      <Button fx:id="rateShowMenuButton" layoutX="-9.0" layoutY="285.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Rate TV-series">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

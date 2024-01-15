@@ -47,3 +47,15 @@
     -fx-text-fill: #2E0854;
     -fx-font-family: "Eras Demi ITC";
 }
+
+.slider {
+    -fx-background-color: transparent;
+}
+
+.slider .track {
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efbaf5 0.0%, #eb2fb9 100.0%);
+}
+
+.slider .thumb {
+    -fx-background-color: #eb2fb9;
+}

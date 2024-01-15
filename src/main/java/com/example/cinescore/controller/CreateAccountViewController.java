@@ -7,6 +7,7 @@ import com.example.cinescore.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -15,11 +16,11 @@ import java.io.IOException;
 public class CreateAccountViewController {
 
     @FXML public Button cancelButton;
+    @FXML public Label titleLabel;
     @FXML private PasswordField passwordField;
     @FXML private TextField usernameField;
     @FXML private Button createAccountButton;
     @FXML private TextField emailField;
-    private static final SceneSwitcher switcher = new SceneSwitcher();
 
     public User createNewAccount(ActionEvent event) {
         CineScore cineScore = CineScoreApp.getCineScore();
@@ -29,7 +30,7 @@ public class CreateAccountViewController {
         User user = null;
         try {
             user = cineScore.createUser(username, email, password);
-            switcher.switchToStartingView(event);
+            SceneSwitcher.switchToStartingView(event);
             DataManager.saveState(cineScore);
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,7 +41,7 @@ public class CreateAccountViewController {
 
     public void cancelAccountCreation(ActionEvent event) {
         try {
-            switcher.switchToStartingView(event);
+            SceneSwitcher.switchToStartingView(event);
         } catch (IOException e) {
             e.printStackTrace();
         }

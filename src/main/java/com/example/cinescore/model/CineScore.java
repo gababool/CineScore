@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class CineScore implements Serializable {
     private HashMap<String, User> users;
     private HashMap<String, Movie> movies;
-    private  HashMap<String, Show> shows;
+    private HashMap<String, Show> shows;
     private String name;
 
     public CineScore(String name){
@@ -37,6 +37,21 @@ public class CineScore implements Serializable {
             throw new Exception("User does not exist");
         }
     }
+
+    public void addMovieRating(String title, String director, int releaseYear, int rating){
+        User user = UserManager.getInstance().getCurrentUser();
+        String movieId = Movie.generateMovieId(title, director, releaseYear);
+        Movie movie = movies.get(movieId);
+        if (movie == null){
+            movies.put(movieId, new Movie(title, director, releaseYear));
+            movie = movies.get(movieId);
+        }
+        user.addRatedMovie(movieId, rating);
+        movie.addRatingScore(rating);
+        DataManager.saveState(this);
+    }
+
+
 
 
 

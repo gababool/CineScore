@@ -1,25 +1,30 @@
 package com.example.cinescore.model;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class User implements Serializable {
 
-    String username;
-    String password;
-    String email;
-    ArrayList<Movie> ratedMovies;
-    ArrayList<Show> ratedShows;
+    private String username;
+    private String password;
+    private String email;
+    private HashMap<String, Integer> ratedMovies;
+    private HashMap<String, Integer> ratedShows;
 
-    public User(String username, String email, String password){
+    public User(String username, String email, String password) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.ratedMovies = new ArrayList<>();
-        this.ratedShows = new ArrayList<>();
+        this.ratedMovies = new LinkedHashMap<>();
+        this.ratedShows = new LinkedHashMap<>();
     }
 
-    public User(){};
+    public User(){}
 
     public String getUsername() {
         return username;
@@ -29,11 +34,13 @@ public class User implements Serializable {
         return password;
     }
 
-    public ArrayList<Movie> getRatedMovies() {
-        return ratedMovies;
+    public String getEmail() {
+        return email;
     }
 
-    public ArrayList<Show> getRatedShows() {
-        return ratedShows;
+    public void addRatedMovie(String movieId, int rating){
+        ratedMovies.put(movieId, rating);
     }
+
+
 }

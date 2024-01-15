@@ -25,23 +25,21 @@ public class StartingViewController {
     @FXML private Label subtitleLabel;
     @FXML private Button loginButton;
 
-    private static final SceneSwitcher switcher = new SceneSwitcher();
-
     public void loginUser(ActionEvent event){
-        CineScore cineScore = CineScoreApp.getCineScore();
         String username = usernameField.getText().trim();
         String password = passwordField.getText();
         try {
+            CineScore cineScore = CineScoreApp.getCineScore();
             User currentUser = cineScore.loginUser(username, password);
             UserManager.getInstance().setCurrentUser(currentUser);
-            switcher.switchToMain(event);
+            SceneSwitcher.switchToMain(event);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void newUser(ActionEvent event) throws IOException{
-        switcher.switchToCreateAccount(event);
+        SceneSwitcher.switchToCreateAccount(event);
     }
 
     @FXML

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.MyRatingsViewController">
+   <children>
+      <TabPane layoutX="133.0" layoutY="75.0" prefHeight="402.0" prefWidth="635.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="moviesTab" text="Movies">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="moviesTable" layoutX="1.0" prefHeight="374.0" prefWidth="635.0" stylesheets="@css/SmallItems.css">
+                          <columns>
+                            <TableColumn prefWidth="104.0" text="Title" />
+                            <TableColumn prefWidth="88.0" text="Director" />
+                              <TableColumn prefWidth="104.0" text="Column X" />
+                              <TableColumn prefWidth="142.0" text="Column X" />
+                              <TableColumn prefWidth="196.0" text="Column X" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="showsTab" text="TV-series">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="showsTable" prefHeight="374.0" prefWidth="635.0" stylesheets="@css/SmallItems.css">
+                           <columns>
+                              <TableColumn prefWidth="104.0" text="Title" />
+                              <TableColumn prefWidth="112.0" text="Release Year" />
+                              <TableColumn text="Column X" />
+                              <TableColumn prefWidth="142.0" text="Column X" />
+                              <TableColumn prefWidth="196.0" text="Column X" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
