@@ -47,9 +47,11 @@ public class MainViewController implements Initializable {
         Map<String, Movie> movies = CineScoreApp.getCineScore().getMovies();
         movieResultsTable.getItems().addAll(movies.values());
 
-        movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
-
+        movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
         directorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
+        movieAvgRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
+        myMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("userRating"));
+
     }
 
     public void goToRateMovie(ActionEvent event){

@@ -78,6 +78,11 @@ public class Movie implements Serializable, Media {
         return (double) scoreTotal /(ratings.size());
     }
 
+    public String getUserRating(){
+        User user = UserManager.getInstance().getCurrentUser();
+        return user.getMovieRating(this.movieId);
+    }
+
     public static String generateMovieId(String title, String director, int releaseYear){
         StringBuilder output = new StringBuilder();
         char[] titleArray = title.toCharArray();

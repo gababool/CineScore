@@ -42,5 +42,14 @@ public class User implements Serializable {
         ratedMovies.put(movieId, rating);
     }
 
+    public String getMovieRating(String movieId){
+        if (ratedMovies.containsKey(movieId)){
+            return String.valueOf(ratedMovies.get(movieId));
+        } else{
+            return "Not rated";
+        }
+
+    }
+
 
 }

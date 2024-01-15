@@ -25,11 +25,11 @@ public class CineScore implements Serializable {
         return shows;
     }
 
-    public User createUser(String username, String email, String password) throws Exception {
+    public void createUser(String username, String email, String password) throws Exception {
         if(users.containsKey(username)){throw new Exception("Username is taken");}
         User newUser = new User(username, email, password);
         users.put(username, newUser);
-        return newUser;
+        DataManager.saveState(this);
     }
 
     public User loginUser(String username, String password) throws Exception {
