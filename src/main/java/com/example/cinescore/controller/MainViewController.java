@@ -1,5 +1,6 @@
 package com.example.cinescore.controller;
 
+import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.User;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
@@ -12,26 +13,27 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainViewController implements Initializable {
-
-
     @FXML public Label loggedInUser;
     public Label titleLabel;
     public Button friendsButton;
     public Button myAccountButton;
-    public TableView resultsTable;
-    public TableColumn titleColumn;
-    public TableColumn avgRatingColumn;
-    public TableColumn myRatingColumn;
     public TextField searchField;
-    public CheckBox movieCheckbox;
-    public CheckBox tvCheckbox;
     public Button myRatingsMenuButton;
     public Button watchlistMenuButton;
     public Button searchButton;
     public Button rateMovieMenuButton;
     public Button rateShowMenuButton;
-
-
+    public Tab movieTab;
+    public TableView movieResultsTable;
+    public TableColumn movieTitleColumn;
+    public TableColumn movieAvgRatingColumn;
+    public TableColumn myMovieRatingColumn;
+    public Tab showTab;
+    public TableView showResultsTable;
+    public TableColumn showTitleColumn;
+    public TableColumn avgShowRatingColumn;
+    public TableColumn myShowRatingColumn;
+    public Button goToMediaPageButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,5 +54,8 @@ public class MainViewController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void goToMediaPage(ActionEvent event) {
     }
 }
