@@ -21,7 +21,7 @@ public class RateMovieViewController {
     public Button addRatingButton;
     public Button returnButton;
 
-    private void rateMovie(ActionEvent event){
+    public void rateMovie(ActionEvent event){
         String title = titleField.getText().trim();
         String director = directorField.getText().trim();
         int releaseYear = Integer.parseInt(releaseYearField.getText().trim());

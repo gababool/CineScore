@@ -17,6 +17,14 @@ public class CineScore implements Serializable {
     }
     public CineScore(){};
 
+    public HashMap<String, Movie> getMovies() {
+        return movies;
+    }
+
+    public HashMap<String, Show> getShows() {
+        return shows;
+    }
+
     public User createUser(String username, String email, String password) throws Exception {
         if(users.containsKey(username)){throw new Exception("Username is taken");}
         User newUser = new User(username, email, password);

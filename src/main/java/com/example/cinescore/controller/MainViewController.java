@@ -1,20 +1,24 @@
 package com.example.cinescore.controller;
 
+import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.Show;
 import com.example.cinescore.model.User;
 import com.example.cinescore.model.UserManager;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MainViewController implements Initializable {
-    @FXML public Label loggedInUser;
+    public Label loggedInUser;
     public Label titleLabel;
     public Button friendsButton;
     public Button myAccountButton;
@@ -40,6 +44,12 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loggedInUser.setText("Logged in as: " + UserManager.getInstance().getCurrentUser().getUsername());
+        Map<String, Movie> movies = CineScoreApp.getCineScore().getMovies();
+        movieResultsTable.getItems().addAll(movies.values());
+
+        movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+
+        directorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
     }
 
     public void goToRateMovie(ActionEvent event){

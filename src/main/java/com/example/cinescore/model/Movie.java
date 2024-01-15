@@ -70,6 +70,14 @@ public class Movie implements Serializable, Media {
         return movieId;
     }
 
+    public double getAvgRating(){
+        int scoreTotal = 0;
+        for(int score : ratings){
+            scoreTotal += score;
+        }
+        return (double) scoreTotal /(ratings.size());
+    }
+
     public static String generateMovieId(String title, String director, int releaseYear){
         StringBuilder output = new StringBuilder();
         char[] titleArray = title.toCharArray();

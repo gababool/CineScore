@@ -27,7 +27,7 @@
          <effect>
             <Glow />
          </effect></Label>
-      <Button fx:id="addRatingButton" layoutX="119.0" layoutY="398.0" mnemonicParsing="false" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
+      <Button fx:id="addRatingButton" layoutX="119.0" layoutY="398.0" mnemonicParsing="false" onAction="#rateMovie" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
       <Button fx:id="returnButton" layoutX="163.0" layoutY="440.0" mnemonicParsing="false" onAction="#returnToMainView" stylesheets="@css/SmallItems.css" text="Return" />
    </children>
 </AnchorPane>
