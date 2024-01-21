@@ -15,8 +15,8 @@ import java.util.ResourceBundle;
 
 public class MainViewController implements Initializable {
     public Label loggedInUser;
+
     public Label titleLabel;
-    public Button friendsButton;
     public Button myAccountButton;
     public TextField searchField;
     public Button myRatingsMenuButton;
@@ -28,7 +28,10 @@ public class MainViewController implements Initializable {
     public TableColumn<Movie, String> directorColumn;
     public TableColumn<Movie, Integer> movieAvgRatingColumn;
     public TableColumn<Movie, Integer> myMovieRatingColumn;
-    public Button goToMediaPageButton;
+    public Button goToMoviePageButton;
+    public Button watchlistMenuButton1;
+    public Button rateMovieTableButton;
+    public Button logoutButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -59,6 +62,24 @@ public class MainViewController implements Initializable {
         }
     }
 
-    public void goToMediaPage(ActionEvent event) {
+    public void logOutUser(ActionEvent event) {
+    }
+
+    public void rateMovieFromTable(ActionEvent event) {
+    }
+
+    public void addToAWatchlist(ActionEvent event) {
+    }
+
+    public void goToMoviePage(ActionEvent event) {
+    }
+
+    public void updateTableFromSearch(ActionEvent event) {
+    }
+
+    public void goToWatchlist(ActionEvent event) {
+    }
+
+    public void goToMyAccount(ActionEvent event) {
     }
 }

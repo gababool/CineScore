@@ -15,25 +15,24 @@
          <font>
             <Font name="Tahoma" size="12.0" />
          </font></Label>
-      <Button fx:id="friendsButton" layoutX="547.0" layoutY="88.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/LargeItems.css" text="Friends" />
-      <Button fx:id="myAccountButton" layoutX="547.0" layoutY="28.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/LargeItems.css" text="My Account" />
+      <Button fx:id="myAccountButton" layoutX="547.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToMyAccount" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/LargeItems.css" text="My Account" />
       <TextField fx:id="searchField" layoutX="310.0" layoutY="526.0" prefHeight="46.0" prefWidth="488.0" promptText="Search by title or director..." stylesheets="@css/SmallItems.css" />
       <Label layoutX="15.0" layoutY="469.0" stylesheets="@css/SmallItems.css">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="rateMovieMenuButton" layoutX="-7.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToRateMovie" prefHeight="90.0" prefWidth="292.0" stylesheets="@css/LargeItems.css" text="Rate Movie">
+      <Button fx:id="rateMovieMenuButton" layoutX="-7.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToRateMovie" prefHeight="90.0" prefWidth="292.0" stylesheets="@css/LargeItems.css" text="Rate a Movie">
          <font>
             <Font size="84.0" />
          </font>
       </Button>
       <Button fx:id="myRatingsMenuButton" layoutX="-7.0" layoutY="300.0" mnemonicParsing="false" onAction="#goToMyRatings" prefHeight="90.0" prefWidth="292.0" stylesheets="@css/LargeItems.css" text="My Ratings" />
-      <Button fx:id="watchlistMenuButton" layoutX="-7.0" layoutY="410.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="292.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
-      <Button fx:id="searchButton" layoutX="798.0" layoutY="528.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="96.0" stylesheets="@css/SmallItems.css" text="Enter" />
-      <Button fx:id="goToMediaPageButton" layoutX="509.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
-      <Button fx:id="watchlistMenuButton1" layoutX="310.0" layoutY="193.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
-      <Button fx:id="goToMediaPageButton1" layoutX="707.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Rate Movie" />
+      <Button fx:id="watchlistMenuButton" layoutX="-7.0" layoutY="410.0" mnemonicParsing="false" onAction="#goToWatchlist" prefHeight="90.0" prefWidth="292.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
+      <Button fx:id="searchButton" layoutX="798.0" layoutY="528.0" mnemonicParsing="false" onAction="#updateTableFromSearch" prefHeight="46.0" prefWidth="96.0" stylesheets="@css/SmallItems.css" text="Enter" />
+      <Button fx:id="goToMoviePageButton" layoutX="509.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+      <Button fx:id="watchlistMenuButton1" layoutX="310.0" layoutY="193.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
+      <Button fx:id="rateMovieTableButton" layoutX="707.0" layoutY="193.0" mnemonicParsing="false" onAction="#rateMovieFromTable" prefHeight="30.0" prefWidth="185.0" stylesheets="@css/SmallItems.css" text="Rate Movie" />
       <TableView fx:id="movieResultsTable" layoutX="310.0" layoutY="223.0" prefHeight="305.0" prefWidth="582.0" stylesheets="@css/SmallItems.css">
         <columns>
           <TableColumn fx:id="movieTitleColumn" editable="false" prefWidth="195.0" resizable="false" text="Title" />
@@ -45,5 +44,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button fx:id="logoutButton" layoutX="547.0" layoutY="88.0" mnemonicParsing="false" onAction="#logOutUser" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/LargeItems.css" text="Log Out" />
    </children>
 </AnchorPane>
