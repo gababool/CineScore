@@ -49,5 +49,9 @@ public class User implements Serializable {
 
     }
 
+    public void addMovieToWatchlist(Movie movie){
+        watchlist.add(movie);
+    }
+
 
 }

@@ -53,6 +53,12 @@ public class CineScore implements Serializable {
         DataManager.saveState(this);
     }
 
+    public void addMovieToWatchlist(Movie movie){
+        User user = UserManager.getInstance().getCurrentUser();
+        user.addMovieToWatchlist(movie);
+        DataManager.saveState(this);
+    }
+
 
 
 
