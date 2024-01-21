@@ -40,6 +40,9 @@ public class CineScore implements Serializable {
         }
     }
 
+
+    // Need to fix so that several ratings for the same movie by the same user cannot be made.
+    // Rating needs to be updated, not added again.
     public void addMovieRating(String title, String director, int releaseYear, int rating){
         User user = UserManager.getInstance().getCurrentUser();
         String movieId = Movie.generateMovieId(title, director, releaseYear);
@@ -48,8 +51,8 @@ public class CineScore implements Serializable {
             movies.put(movieId, new Movie(title, director, releaseYear));
             movie = movies.get(movieId);
         }
-        user.addRatedMovie(movieId, rating);
         movie.addRatingScore(rating);
+        user.addRatedMovie(movieId, rating);
         DataManager.saveState(this);
     }
 

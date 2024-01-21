@@ -100,6 +100,23 @@ public class Movie implements Serializable {
     }
 
     public void addRatingScore(int score){
-        ratings.add(score);
+        User user = UserManager.getInstance().getCurrentUser();
+        if (user.getRatedMovies().containsKey(this.movieId)){
+            int previousRating = Integer.parseInt(user.getMovieRating(this.movieId));
+            updateRatingScore(previousRating, score);
+        } else {
+            ratings.add(score);
+        }
     }
+
+    private void updateRatingScore(int previousScore, int newScore){
+        for (int i = 0; i < ratings.size(); i++){
+            if (ratings.get(i) == previousScore){
+                ratings.remove(ratings.get(i));
+                ratings.add(newScore);
+                break;
+            }
+        }
     }
+
+}

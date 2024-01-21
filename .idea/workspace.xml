@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="">
+    <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="More methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,12 +100,36 @@
       <workItem from="1705855922370" duration="1027000" />
       <workItem from="1705861313103" duration="909000" />
       <workItem from="1705862505562" duration="898000" />
-      <workItem from="1705863917694" duration="299000" />
+      <workItem from="1705863917694" duration="444000" />
+      <workItem from="1705866196107" duration="8967000" />
     </task>
+    <task id="LOCAL−00001" summary="More methods">
+      <option name="closed" value="true" />
+      <created>1705872799679</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1705872799680</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="More methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="More methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

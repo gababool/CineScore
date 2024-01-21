@@ -35,23 +35,22 @@ public class User implements Serializable {
     public String getEmail() {
         return email;
     }
-
     public void addRatedMovie(String movieId, int rating){
         ratedMovies.put(movieId, rating);
     }
-
     public String getMovieRating(String movieId){
         if (ratedMovies.containsKey(movieId)){
             return String.valueOf(ratedMovies.get(movieId));
         } else{
             return "Not rated";
         }
-
     }
 
     public void addMovieToWatchlist(Movie movie){
         watchlist.add(movie);
     }
 
-
+    public HashMap<String, Integer> getRatedMovies() {
+        return ratedMovies;
+    }
 }
