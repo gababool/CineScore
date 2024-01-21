@@ -2,14 +2,21 @@ package com.example.cinescore.controller;
 
 import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.CineScore;
+import com.example.cinescore.model.Movie;
+import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 public class RateMovieViewController {
     public Label titleLabel;
@@ -20,6 +27,15 @@ public class RateMovieViewController {
     public Label ratingFromSlider;
     public Button addRatingButton;
     public Button returnButton;
+
+    public void loadMovieInfo(Movie movie){
+        titleField.setText(movie.getTitle());
+        titleField.setEditable(false);
+        directorField.setText(movie.getDirector());
+        directorField.setEditable(false);
+        releaseYearField.setText(String.valueOf(movie.getReleaseYear()));
+        releaseYearField.setEditable(false);
+    }
 
     public void rateMovie(ActionEvent event){
         String title = titleField.getText().trim();

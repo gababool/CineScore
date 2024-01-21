@@ -1,6 +1,7 @@
 package com.example.cinescore.controller;
 
 import com.example.cinescore.CineScoreApp;
+import com.example.cinescore.model.CineScore;
 import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
@@ -66,9 +67,22 @@ public class MainViewController implements Initializable {
     }
 
     public void rateMovieFromTable(ActionEvent event) {
+        Movie movie = movieResultsTable.getSelectionModel().getSelectedItem();
+        if (movie != null){
+            try {
+                SceneSwitcher.switchToRateMovieView(event, movie);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void addToAWatchlist(ActionEvent event) {
+        Movie movie = movieResultsTable.getSelectionModel().getSelectedItem();
+        CineScore cineScore = CineScoreApp.getCineScore();
+        if (movie != null){
+            cineScore.addMovieToWatchlist(movie);
+        }
     }
 
     public void goToMoviePage(ActionEvent event) {
