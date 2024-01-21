@@ -20,8 +20,8 @@
                         <TableView fx:id="moviesTable" prefHeight="558.0" prefWidth="493.0" stylesheets="@css/SmallItems.css">
                           <columns>
                             <TableColumn fx:id="movieTitleColumn" prefWidth="157.0" text="Title" />
-                            <TableColumn fx:id="movieDirectorColumn" prefWidth="168.0" text="Director" />
-                              <TableColumn fx:id="myMovieRatingColumn" prefWidth="76.0" text="My Rating" />
+                            <TableColumn fx:id="movieDirectorColumn" prefWidth="140.0" text="Director" />
+                              <TableColumn fx:id="myMovieRatingColumn" prefWidth="104.0" text="My Rating" />
                               <TableColumn fx:id="avgMovieRatingColumn" prefWidth="91.0" text="Avg. Rating" />
                           </columns>
                         </TableView>

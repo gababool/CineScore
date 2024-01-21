@@ -5,24 +5,31 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.RateShowViewController">
    <children>
-      <Label fx:id="titleLabel" layoutX="40.0" layoutY="14.0" stylesheets="@css/LargeItems.css" text="Rate Show" />
-      <TextField fx:id="titleField" focusTraversable="false" layoutX="36.0" layoutY="196.0" promptText="Title" stylesheets="@css/SmallItems.css" />
-      <TextField fx:id="releaseYearField" focusTraversable="false" layoutX="34.0" layoutY="250.0" promptText="Release Year" stylesheets="@css/SmallItems.css" />
-      <Slider fx:id="slider" blockIncrement="1.0" layoutX="36.0" layoutY="317.0" max="10.0" min="1.0" prefHeight="24.0" prefWidth="332.0" showTickLabels="true" snapToTicks="true" stylesheets="@css/SmallItems.css">
+      <Label fx:id="titleLabel" layoutX="37.0" layoutY="55.0" prefHeight="89.0" prefWidth="331.0" stylesheets="@css/LargeItems.css" text="Rate Show">
+         <effect>
+            <Glow level="0.6" />
+         </effect></Label>
+      <TextField fx:id="titleField" focusTraversable="false" layoutX="37.0" layoutY="164.0" prefHeight="46.0" prefWidth="331.0" promptText="Title" stylesheets="@css/SmallItems.css" />
+      <TextField fx:id="releaseYearField" focusTraversable="false" layoutX="37.0" layoutY="227.0" prefHeight="46.0" prefWidth="331.0" promptText="Release Year" stylesheets="@css/SmallItems.css" />
+      <Slider fx:id="slider" blockIncrement="1.0" layoutX="39.0" layoutY="297.0" max="10.0" min="1.0" prefHeight="24.0" prefWidth="332.0" showTickLabels="true" snapToTicks="true" stylesheets="@css/SmallItems.css">
          <effect>
             <Bloom />
          </effect>
       </Slider>
-      <Label fx:id="ratingFromSlider" layoutX="192.0" layoutY="341.0" prefHeight="19.0" prefWidth="20.0" stylesheets="@css/SmallItems.css" text="00">
+      <Label fx:id="ratingFromSlider" layoutX="200.0" layoutY="320.0" prefHeight="20.0" prefWidth="2.0" stylesheets="@css/SmallItems.css" text="1">
          <font>
             <Font size="16.0" />
-         </font></Label>
-      <Button fx:id="addRatingButton" layoutX="119.0" layoutY="398.0" mnemonicParsing="false" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
-      <Button fx:id="returnButton" layoutX="163.0" layoutY="440.0" mnemonicParsing="false" stylesheets="@css/SmallItems.css" text="Return" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect></Label>
+      <Button fx:id="addRatingButton" layoutX="129.0" layoutY="371.0" mnemonicParsing="false" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
+      <Button fx:id="returnButton" layoutX="170.0" layoutY="411.0" mnemonicParsing="false" stylesheets="@css/SmallItems.css" text="Return" />
    </children>
 </AnchorPane>

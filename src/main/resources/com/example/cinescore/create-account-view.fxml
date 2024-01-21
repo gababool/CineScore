@@ -9,15 +9,15 @@
 
 <AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.CreateAccountViewController">
    <children>
-      <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="38.0" layoutY="311.0" prefHeight="44.0" prefWidth="328.0" promptText="Password" stylesheets="@css/SmallItems.css" />
-      <TextField fx:id="usernameField" focusTraversable="false" layoutX="38.0" layoutY="187.0" prefHeight="44.0" prefWidth="328.0" promptText="Username" stylesheets="@css/SmallItems.css" />
-      <Label fx:id="titleLabel" layoutX="52.0" layoutY="25.0" stylesheets="@css/LargeItems.css" text="New User" textFill="#fcfafa">
+      <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="39.0" layoutY="294.0" prefHeight="44.0" prefWidth="328.0" promptText="Password" stylesheets="@css/SmallItems.css" />
+      <TextField fx:id="usernameField" focusTraversable="false" layoutX="40.0" layoutY="178.0" prefHeight="44.0" prefWidth="328.0" promptText="Username" stylesheets="@css/SmallItems.css" />
+      <Label fx:id="titleLabel" layoutX="55.0" layoutY="54.0" stylesheets="@css/LargeItems.css" text="New User" textFill="#fcfafa">
          <font>
             <Font size="40.0" />
          </font>
       </Label>
-      <Button fx:id="createAccountButton" layoutX="132.0" layoutY="383.0" mnemonicParsing="false" onAction="#createNewAccount" stylesheets="@css/SmallItems.css" text="Create Account" />
-      <TextField fx:id="emailField" focusTraversable="false" layoutX="39.0" layoutY="242.0" prefHeight="44.0" prefWidth="328.0" promptText="E-mail" stylesheets="@css/SmallItems.css" />
-      <Button fx:id="cancelButton" layoutX="133.0" layoutY="422.0" mnemonicParsing="false" onAction="#cancelAccountCreation" prefHeight="29.0" prefWidth="140.0" stylesheets="@css/SmallItems.css" text="Return" />
+      <Button fx:id="createAccountButton" layoutX="126.0" layoutY="364.0" mnemonicParsing="false" onAction="#createNewAccount" prefHeight="37.0" prefWidth="148.0" stylesheets="@css/SmallItems.css" text="Create Account" />
+      <TextField fx:id="emailField" focusTraversable="false" layoutX="39.0" layoutY="236.0" prefHeight="44.0" prefWidth="328.0" promptText="E-mail" stylesheets="@css/SmallItems.css" />
+      <Button fx:id="cancelButton" layoutX="130.0" layoutY="412.0" mnemonicParsing="false" onAction="#cancelAccountCreation" prefHeight="29.0" prefWidth="140.0" stylesheets="@css/SmallItems.css" text="Return" />
    </children>
 </AnchorPane>

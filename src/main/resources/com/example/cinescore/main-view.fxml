@@ -13,40 +13,40 @@
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.MainViewController">
    <children>
       <Label fx:id="titleLabel" layoutX="26.0" prefHeight="149.0" prefWidth="333.0" stylesheets="@css/LargeItems.css" text="CineScore" />
-      <Label fx:id="loggedInUser" layoutX="31.0" layoutY="135.0" stylesheets="@css/SmallItems.css" text="Logged in as: &lt;User&gt;" />
+      <Label fx:id="loggedInUser" layoutX="109.0" layoutY="115.0" prefHeight="15.0" prefWidth="122.0" stylesheets="@css/SmallItems.css" text="Logged in as: &lt;User&gt;" />
       <Button fx:id="friendsButton" layoutX="547.0" layoutY="88.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Friends" />
       <Button fx:id="myAccountButton" layoutX="547.0" layoutY="28.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="My Account" />
-      <TextField fx:id="searchField" layoutX="441.0" layoutY="211.0" prefHeight="44.0" prefWidth="321.0" stylesheets="@css/SmallItems.css" />
-      <Label layoutX="441.0" layoutY="185.0" stylesheets="@css/SmallItems.css" text="Search by title or director...">
+      <TextField fx:id="searchField" layoutX="311.0" layoutY="211.0" prefHeight="46.0" prefWidth="451.0" stylesheets="@css/SmallItems.css" />
+      <Label layoutX="312.0" layoutY="184.0" stylesheets="@css/SmallItems.css" text="Search by title or director...">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="rateMovieMenuButton" layoutX="-12.0" layoutY="207.0" mnemonicParsing="false" onAction="#goToRateMovie" prefHeight="85.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Rate Movie">
+      <Button fx:id="rateMovieMenuButton" layoutX="-12.0" layoutY="207.0" mnemonicParsing="false" onAction="#goToRateMovie" prefHeight="85.0" prefWidth="292.0" stylesheets="@css/SmallItems.css" text="Rate Movie">
          <font>
             <Font size="38.0" />
          </font>
       </Button>
-      <Button fx:id="myRatingsMenuButton" layoutX="-12.0" layoutY="394.0" mnemonicParsing="false" onAction="#goToMyRatings" prefHeight="85.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="My Ratings" />
-      <Button fx:id="watchlistMenuButton" layoutX="-12.0" layoutY="487.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Watchlist" />
-      <Button fx:id="searchButton" layoutX="707.0" layoutY="211.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="64.0" stylesheets="@css/SmallItems.css" text="Enter" />
-      <Button fx:id="rateShowMenuButton" layoutX="-12.0" layoutY="300.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="368.0" stylesheets="@css/SmallItems.css" text="Rate TV-series">
+      <Button fx:id="myRatingsMenuButton" layoutX="-12.0" layoutY="394.0" mnemonicParsing="false" onAction="#goToMyRatings" prefHeight="85.0" prefWidth="292.0" stylesheets="@css/SmallItems.css" text="My Ratings" />
+      <Button fx:id="watchlistMenuButton" layoutX="-12.0" layoutY="487.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="292.0" stylesheets="@css/SmallItems.css" text="Watchlist" />
+      <Button fx:id="searchButton" layoutX="691.0" layoutY="211.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="96.0" stylesheets="@css/SmallItems.css" text="Enter" />
+      <Button fx:id="rateShowMenuButton" layoutX="-12.0" layoutY="300.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="292.0" stylesheets="@css/SmallItems.css" text="Rate TV-series">
          <font>
             <Font size="38.0" />
          </font>
       </Button>
-      <TabPane layoutX="442.0" layoutY="261.0" prefHeight="311.0" prefWidth="455.0" stylesheets="@css/SmallItems.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="312.0" layoutY="261.0" prefHeight="311.0" prefWidth="585.0" stylesheets="@css/SmallItems.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab fx:id="movieTab" text="Movies">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="455.0">
                      <children>
-                        <TableView fx:id="movieResultsTable" prefHeight="272.0" prefWidth="455.0" stylesheets="@css/SmallItems.css">
+                        <TableView fx:id="movieResultsTable" layoutX="-7.0" layoutY="-1.0" prefHeight="272.0" prefWidth="596.0" stylesheets="@css/SmallItems.css">
                           <columns>
-                            <TableColumn fx:id="movieTitleColumn" editable="false" prefWidth="138.0" resizable="false" text="Title" />
-                              <TableColumn fx:id="directorColumn" editable="false" prefWidth="159.0" resizable="false" text="Director" />
-                              <TableColumn fx:id="movieAvgRatingColumn" editable="false" prefWidth="83.0" resizable="false" text="Avg. Rating" />
-                              <TableColumn fx:id="myMovieRatingColumn" editable="false" minWidth="1.0" prefWidth="74.0" resizable="false" text="My Rating" />
+                            <TableColumn fx:id="movieTitleColumn" editable="false" prefWidth="195.0" resizable="false" text="Title" />
+                              <TableColumn fx:id="directorColumn" editable="false" prefWidth="172.0" resizable="false" text="Director" />
+                              <TableColumn fx:id="movieAvgRatingColumn" editable="false" prefWidth="115.0" resizable="false" text="Avg. Rating" />
+                              <TableColumn fx:id="myMovieRatingColumn" editable="false" minWidth="1.0" prefWidth="109.0" resizable="false" text="My Rating" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -60,11 +60,11 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="showResultsTable" prefHeight="282.0" prefWidth="455.0" stylesheets="@css/SmallItems.css">
+                        <TableView fx:id="showResultsTable" layoutY="-6.0" prefHeight="282.0" prefWidth="585.0" stylesheets="@css/SmallItems.css">
                            <columns>
-                              <TableColumn fx:id="showTitleColumn" editable="false" prefWidth="231.0" resizable="false" text="Title" />
-                              <TableColumn fx:id="avgShowRatingColumn" editable="false" prefWidth="103.0" resizable="false" text="Avg. Rating" />
-                              <TableColumn fx:id="myShowRatingColumn" editable="false" prefWidth="120.0" resizable="false" text="My Rating" />
+                              <TableColumn fx:id="showTitleColumn" editable="false" prefWidth="351.0" resizable="false" text="Title" />
+                              <TableColumn fx:id="avgShowRatingColumn" editable="false" prefWidth="120.0" resizable="false" text="Avg. Rating" />
+                              <TableColumn fx:id="myShowRatingColumn" editable="false" prefWidth="113.0" resizable="false" text="My Rating" />
                            </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -76,6 +76,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button fx:id="goToMediaPageButton" layoutX="781.0" layoutY="211.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="44.0" prefWidth="116.0" stylesheets="@css/SmallItems.css" text="Go to page" />
+      <Button fx:id="goToMediaPageButton" layoutX="792.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="44.0" prefWidth="109.0" stylesheets="@css/SmallItems.css" text="Go to page" />
    </children>
 </AnchorPane>

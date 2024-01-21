@@ -2,7 +2,9 @@
 #titleLabel{
     -fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efbaf5 0.0%, #eb2fb9 100.0%);
     -fx-font-family: "Tahoma";
-    -fx-font-size: 135px;
+    -fx-font-size: 70px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 105, 180, 0.8), 10, 0, 0, 0),
+    dropshadow(gaussian, rgba(128, 0, 128, 0.8), 10, 0, 0, 0);
 }
 
 .label{
