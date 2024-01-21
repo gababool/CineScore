@@ -1,5 +1,6 @@
 package com.example.cinescore.controller;
 
+import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -9,18 +10,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MyRatingsViewController implements Initializable {
-    public TableView<String> showsTable;
-    public Tab showsTab;
-    public TableView moviesTable;
-    public Tab moviesTab;
-    public TableColumn movieTitleColumn;
-    public TableColumn movieDirectorColumn;
-    public TableColumn myMovieRatingColumn;
-    public TableColumn avgMovieRatingColumn;
-    public TableColumn showTitleColumn;
-    public TableColumn myShowRatingColumn;
-    public TableColumn avgShowRatingColumn;
+    public TableView<Movie> moviesTable;
+    public TableColumn<Movie, String> movieTitleColumn;
+    public TableColumn<Movie, String> movieDirectorColumn;
+    public TableColumn<Movie, Integer> myMovieRatingColumn;
+    public TableColumn<Movie, Integer> avgMovieRatingColumn;
     public Button goToMediaButton;
+
     public Label titleLabel;
     public Button updateRatingButton;
     public Button returnButton;

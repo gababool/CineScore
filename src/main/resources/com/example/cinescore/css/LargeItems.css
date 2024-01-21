@@ -14,3 +14,15 @@
 
 .root { -fx-focus-color: transparent; }
 
+.button{
+    -fx-background-color:  #2E0854;
+    -fx-font-family: "Tahoma";
+    -fx-text-fill: #efbaf5;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-background-color: #4B0082;
+}
+

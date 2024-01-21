@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 
-public class Movie implements Serializable, Media {
+public class Movie implements Serializable {
 
     String movieId;
     String title;

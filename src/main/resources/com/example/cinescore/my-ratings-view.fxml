@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -11,46 +9,19 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.MyRatingsViewController">
    <children>
-      <TabPane layoutX="407.0" prefHeight="600.0" prefWidth="493.0" stylesheets="@css/SmallItems.css" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab fx:id="moviesTab" text="Movies">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TableView fx:id="moviesTable" prefHeight="558.0" prefWidth="493.0" stylesheets="@css/SmallItems.css">
-                          <columns>
-                            <TableColumn fx:id="movieTitleColumn" prefWidth="157.0" text="Title" />
-                            <TableColumn fx:id="movieDirectorColumn" prefWidth="140.0" text="Director" />
-                              <TableColumn fx:id="myMovieRatingColumn" prefWidth="104.0" text="My Rating" />
-                              <TableColumn fx:id="avgMovieRatingColumn" prefWidth="91.0" text="Avg. Rating" />
-                          </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab fx:id="showsTab" text="TV-series">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TableView fx:id="showsTable" prefHeight="559.0" prefWidth="493.0" stylesheets="@css/SmallItems.css">
-                           <columns>
-                              <TableColumn fx:id="showTitleColumn" prefWidth="256.0" text="Title" />
-                              <TableColumn fx:id="myShowRatingColumn" prefWidth="112.0" text="My Rating" />
-                              <TableColumn fx:id="avgShowRatingColumn" prefWidth="124.0" text="Avg. Rating" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
-      <Button fx:id="goToMediaButton" layoutY="274.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Go to &lt;Media&gt; Page" />
+      <Button fx:id="goToMediaButton" layoutY="274.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
       <Label fx:id="titleLabel" layoutX="26.0" layoutY="14.0" prefHeight="149.0" prefWidth="362.0" stylesheets="@css/LargeItems.css" text="My Ratings" />
       <Button fx:id="updateRatingButton" layoutY="353.0" mnemonicParsing="false" onAction="#updateRating" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
       <Button fx:id="returnButton" layoutY="434.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Return" />
       <TextField fx:id="searchField" layoutY="193.0" prefHeight="70.0" prefWidth="378.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
       <Button fx:id="searchButton" layoutX="314.0" layoutY="193.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="64.0" stylesheets="@css/SmallItems.css" text="Enter" />
+      <TableView fx:id="moviesTable" layoutX="408.0" prefHeight="600.0" prefWidth="492.0" stylesheets="@css/SmallItems.css">
+        <columns>
+          <TableColumn fx:id="movieTitleColumn" prefWidth="194.0" text="Title" />
+          <TableColumn fx:id="movieDirectorColumn" prefWidth="128.0" text="Director" />
+            <TableColumn fx:id="myMovieRatingColumn" prefWidth="88.0" text="My Rating" />
+            <TableColumn fx:id="avgMovieRatingColumn" prefWidth="81.0" text="Avg. Rating" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

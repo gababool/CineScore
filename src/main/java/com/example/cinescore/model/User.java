@@ -1,12 +1,8 @@
 package com.example.cinescore.model;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class User implements Serializable {
 
@@ -14,14 +10,12 @@ public class User implements Serializable {
     private String password;
     private String email;
     private HashMap<String, Integer> ratedMovies;
-    private HashMap<String, Integer> ratedShows;
 
     public User(String username, String email, String password) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.ratedMovies = new LinkedHashMap<>();
-        this.ratedShows = new LinkedHashMap<>();
     }
 
     public User(){}

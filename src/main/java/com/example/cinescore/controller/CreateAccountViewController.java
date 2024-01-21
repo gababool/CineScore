@@ -33,8 +33,6 @@ public class CreateAccountViewController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     public void cancelAccountCreation(ActionEvent event) {

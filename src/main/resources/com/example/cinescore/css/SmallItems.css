@@ -1,12 +1,19 @@
+#loggedInUser{
+    -fx-text-fill: #efbaf5;
+    -fx-font-family: "Tahoma";
+    -fx-font-weight: bold;
+}
+
 .button{
     -fx-background-color:  #2E0854;
     -fx-font-family: "Tahoma";
     -fx-text-fill: #efbaf5;
     -fx-font-size: 16px;
+    -fx-font-weight: bold;
 }
 
 .button:hover{
-    -fx-text-fill: #8A2BE2;
+    -fx-background-color: #4B0082;
 }
 
 .label{
@@ -24,28 +31,47 @@
     -fx-font-size: 24px;
 }
 
-/* Apply the style to the entire TableView */
 .table-view {
     -fx-text-fill: #2E0854;
     -fx-font-family: "Tahoma";
-        -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eb2fb9 0.0%, #efbaf5 100.0%);
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eb2fb9 0.0%, #efbaf5 100.0%);
 }
 
-/* Apply the style to the Ta    bleHeaderRow */
 .table-view .column-header {
     -fx-background-color: #2E0854;
-    -fx-text-fill: #2E0854; /* Set the text color for column headers */
-}
-
-/* Apply the style to the TableHeaderCell (individual column header) */
-.table-view .column-header .label {
-    -fx-text-fill: #efbaf5; /* Set the text color for individual column headers */
-}
-
-/* Apply the style to the TableView cells */
-.table-cell {
     -fx-text-fill: #2E0854;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #efbaf5;
+}
+
+.table-cell {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 4px;
     -fx-font-family: "Tahoma";
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #2E0854;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: white;
+}
+.table-row-cell:even {
+    -fx-background-color:#4B0082;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    -fx-text-fill: white;
+}
+.table-row-cell:hover {
+    -fx-background-color: #eb2fb9;
+    -fx-text-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #eb2fb9;
 }
 
 .slider {
@@ -60,30 +86,6 @@
     -fx-background-color: #eb2fb9;
 }
 
-.tab-pane {
-    -fx-font-family: "Tahoma";
-    -fx-font-size: 14px;
-    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #efbaf5 0.0%, #eb2fb9 100.0%);
-}
 
-.tab {
-    -fx-background-color: transparent;
-    -fx-background-insets: 0, 0 0 1 0;
-    -fx-background-radius: 0;
-    -fx-padding: 5 20 5 20;
-}
-
-.tab-header-area {
-    -fx-background-color: #efbaf5;
-}
-
-.tab:selected {
-    -fx-background-color: #9932CC;
-    -fx-text-fill: #000000;
-}
-
-.tab-header-background{
-    -fx-background-color: #efbaf5;
-}
 
 .root { -fx-focus-color: transparent; }

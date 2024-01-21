@@ -6,23 +6,17 @@ import java.util.HashMap;
 public class CineScore implements Serializable {
     private HashMap<String, User> users;
     private HashMap<String, Movie> movies;
-    private HashMap<String, Show> shows;
     private String name;
 
     public CineScore(String name){
         this.users = new HashMap<>();
         this.movies = new HashMap<>();
-        this.shows = new HashMap<>();
         this.name = name;
     }
     public CineScore(){};
 
     public HashMap<String, Movie> getMovies() {
         return movies;
-    }
-
-    public HashMap<String, Show> getShows() {
-        return shows;
     }
 
     public void createUser(String username, String email, String password) throws Exception {
