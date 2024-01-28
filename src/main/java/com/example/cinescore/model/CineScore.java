@@ -53,16 +53,17 @@ public class CineScore implements Serializable {
         DataManager.saveState(this);
     }
 
-    public void addMovieRating(String title, String director, int releaseYear, int rating){
+    public void addMovieRating(String title, String releaseYear, int rating) throws Exception {
         User user = UserManager.getInstance().getCurrentUser();
-        String movieId = Movie.generateMovieId(title, director, releaseYear);
-        Movie movie = movies.get(movieId);
-        if (movie == null){
-            movies.put(movieId, new Movie(title, director, releaseYear));
-            movie = movies.get(movieId);
+        Movie movie = MovieAPIService.retrieveMovieData(title, releaseYear);
+        if (movie==null){
+            throw new Exception("Movie not found");
+        }
+        if (!movies.containsKey(movie.getMovieId())){
+            movies.put(movie.getMovieId(), movie);
         }
         movie.addRatingScore(rating);
-        user.addRatedMovie(movieId, rating);
+        user.addRatedMovie(movie.getMovieId(), rating);
         DataManager.saveState(this);
     }
 

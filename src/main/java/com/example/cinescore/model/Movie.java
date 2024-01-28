@@ -8,23 +8,35 @@ import java.util.UUID;
 
 public class Movie implements Serializable {
 
-    String movieId;
-    String title;
-    String director;
-    int releaseYear;
-    ArrayList<Integer> ratings;
-    ArrayList<String> reviews;
+    private String movieId;
+    private String title;
+    private String director;
+    private String releaseYear;
+    private String writer;
+    private String runtime;
+    private String actors;
+    private String plot;
+    private String poster;
+    private ArrayList<Integer> ratings;
+    private ArrayList<String> reviews;
 
-    public Movie(String title, String director, int releaseYear){
+    public Movie(String title, String director, String releaseYear, String writer, String runtime, String actors, String plot, String id, String poster){
         this.title = title;
         this.director = director;
         this.releaseYear = releaseYear;
+        this.writer = writer;
+        this.runtime = runtime;
+        this.actors = actors;
+        this.plot = plot;
+        this.movieId = id;
+        this.poster = poster;
         this.ratings = new ArrayList<>();
         this.reviews = new ArrayList<>();
-        this.movieId = generateMovieId(this.title, this.director, this.releaseYear);
+
     }
 
     public Movie(){};
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -41,6 +53,26 @@ public class Movie implements Serializable {
         return title + " (" + releaseYear + ")";
     }
 
+    public String getWriter() {
+        return writer;
+    }
+
+    public String getRuntime() {
+        return runtime;
+    }
+
+    public String getActors() {
+        return actors;
+    }
+
+    public String getPlot() {
+        return plot;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
     public String getDirector(){
         return director;
     }
@@ -49,7 +81,7 @@ public class Movie implements Serializable {
         return title;
     }
 
-    public int getReleaseYear() {
+    public String getReleaseYear() {
         return releaseYear;
     }
 
@@ -77,27 +109,6 @@ public class Movie implements Serializable {
     public String getUserRating(){
         User user = UserManager.getInstance().getCurrentUser();
         return user.getMovieRating(this.movieId);
-    }
-
-    // Fix code duplication here!
-    public static String generateMovieId(String title, String director, int releaseYear){
-        StringBuilder output = new StringBuilder();
-        char[] titleArray = title.toCharArray();
-        for(char letter : titleArray){
-            String letterAsString = String.valueOf(letter);
-            if(letterAsString.matches("[a-zA-Z]+")){
-                output.append(letterAsString.toLowerCase());
-            }
-        }
-        char[] directorArray = director.toCharArray();
-        for(char letter : directorArray){
-            String letterAsString = String.valueOf(letter);
-            if(letterAsString.matches("[a-zA-Z]+")){
-                output.append(letterAsString.toLowerCase());
-            }
-        }
-        output.append(releaseYear);
-        return output.toString();
     }
 
     public void addRatingScore(int score){
