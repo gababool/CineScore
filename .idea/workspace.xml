@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="More methods">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/WatchlistViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/my-account.view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/CreateAccountViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/CreateAccountViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MyAccountViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MyAccountViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MyRatingsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/MyRatingsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/SceneSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/SceneSwitcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/StartingViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/WatchlistViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/WatchlistViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/create-account-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/create-account-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/my-ratings-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/my-ratings-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/myAccountView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/watchlist-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/starting-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/starting-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +108,10 @@
       <workItem from="1705863917694" duration="444000" />
       <workItem from="1705866196107" duration="9192000" />
       <workItem from="1706437389724" duration="3596000" />
-      <workItem from="1706444147147" duration="6590000" />
+      <workItem from="1706444147147" duration="6950000" />
+      <workItem from="1706451372589" duration="151000" />
+      <workItem from="1706451750118" duration="49000" />
+      <workItem from="1706455856290" duration="841000" />
     </task>
     <task id="LOCAL−00001" summary="More methods">
       <option name="closed" value="true" />

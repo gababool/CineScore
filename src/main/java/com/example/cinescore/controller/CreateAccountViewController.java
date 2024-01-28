@@ -19,7 +19,7 @@ public class CreateAccountViewController {
 
     @FXML public Button cancelButton;
     @FXML public Label titleLabel;
-    public Label messageLabel;
+    @FXML public Label messageLabel;
     @FXML private PasswordField passwordField;
     @FXML private TextField usernameField;
     @FXML private Button createAccountButton;

@@ -39,12 +39,17 @@ public class CineScore implements Serializable {
     }
 
     public void changeUsername(String username) throws Exception{
-        UserManager.getInstance().getCurrentUser().setUsername(username);
+        User user = UserManager.getInstance().getCurrentUser();
+        String oldUsername = user.getUsername();
+        user.setUsername(username);
+        users.put(user.getUsername(), user);
+        users.remove(oldUsername);
         DataManager.saveState(this);
     }
 
     public void changePassword(String password) throws Exception{
-        UserManager.getInstance().getCurrentUser().setPassword(password);
+        User user = UserManager.getInstance().getCurrentUser();
+        user.setPassword(password);
         DataManager.saveState(this);
     }
 

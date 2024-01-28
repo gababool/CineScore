@@ -71,8 +71,7 @@ public class Movie implements Serializable {
         for(int score : ratings){
             scoreTotal += score;
         }
-        double avgRating = (double) scoreTotal /(ratings.size());
-        return avgRating;
+        return (double) scoreTotal /(ratings.size());
     }
 
     public String getUserRating(){

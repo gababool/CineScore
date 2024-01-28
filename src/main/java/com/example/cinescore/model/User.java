@@ -3,26 +3,28 @@ package com.example.cinescore.model;
 import com.example.cinescore.CineScoreApp;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class User implements Serializable {
     private String username;
     private String password;
     private HashMap<String, Integer> ratedMovies;
     private HashMap<String, String> reviews;
-    private ArrayList<Movie> watchlist;
+    private HashSet<Movie> watchlist;
 
     public User(String username, String password) throws Exception {
         this.username = checkUsername(username);
         this.password = checkPassword(password);
         this.ratedMovies = new LinkedHashMap<>();
         this.reviews = new  LinkedHashMap<>();
-        this.watchlist = new ArrayList<>();
+        this.watchlist = new HashSet<>();
     }
 
     public User(){}
+
+    public HashSet<Movie> getWatchlist() {
+        return watchlist;
+    }
 
     public String getUsername() {
         return username;

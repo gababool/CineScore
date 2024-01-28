@@ -44,7 +44,7 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <Button fx:id="loginButton" layoutX="146.0" layoutY="330.0" mnemonicParsing="false" onAction="#loginUser" onKeyPressed="#handleKeyPress" prefHeight="34.0" prefWidth="120.0" stylesheets="@css/SmallItems.css" text="Login" textFill="#efbaf5">
+      <Button fx:id="loginButton" layoutX="140.0" layoutY="330.0" mnemonicParsing="false" onAction="#loginUser" onKeyPressed="#handleKeyPress" prefHeight="34.0" prefWidth="120.0" stylesheets="@css/SmallItems.css" text="Login" textFill="#efbaf5">
          <font>
             <Font name="Eras Demi ITC" size="16.0" />
          </font></Button>
