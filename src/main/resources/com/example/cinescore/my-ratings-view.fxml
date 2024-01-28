@@ -9,18 +9,18 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.MyRatingsViewController">
    <children>
-      <Button fx:id="goToMediaButton" layoutY="274.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
-      <Label fx:id="titleLabel" layoutX="26.0" layoutY="14.0" prefHeight="149.0" prefWidth="362.0" stylesheets="@css/LargeItems.css" text="My Ratings" />
-      <Button fx:id="updateRatingButton" layoutY="353.0" mnemonicParsing="false" onAction="#updateRating" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
-      <Button fx:id="returnButton" layoutY="434.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="378.0" stylesheets="@css/SmallItems.css" text="Return" />
-      <TextField fx:id="searchField" layoutY="193.0" prefHeight="70.0" prefWidth="378.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
-      <Button fx:id="searchButton" layoutX="314.0" layoutY="193.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="64.0" stylesheets="@css/SmallItems.css" text="Enter" />
-      <TableView fx:id="moviesTable" layoutX="408.0" prefHeight="600.0" prefWidth="492.0" stylesheets="@css/SmallItems.css">
+      <Button fx:id="goToMediaButton" layoutX="-2.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+      <Label fx:id="titleLabel" layoutX="32.0" layoutY="26.0" prefHeight="90.0" prefWidth="238.0" stylesheets="@css/LargeItems.css" text="Ratings" />
+      <Button fx:id="updateRatingButton" layoutX="-2.0" layoutY="341.0" mnemonicParsing="false" onAction="#updateRating" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
+      <Button fx:id="returnButton" layoutX="-2.0" layoutY="244.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Return" />
+      <TextField fx:id="searchField" layoutX="292.0" layoutY="490.0" prefHeight="50.0" prefWidth="478.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
+      <Button fx:id="searchButton" layoutX="770.0" layoutY="490.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" stylesheets="@css/SmallItems.css" text="Enter" />
+      <TableView fx:id="moviesTable" layoutX="292.0" layoutY="109.0" prefHeight="381.0" prefWidth="573.0" stylesheets="@css/SmallItems.css">
         <columns>
-          <TableColumn fx:id="movieTitleColumn" prefWidth="194.0" text="Title" />
-          <TableColumn fx:id="movieDirectorColumn" prefWidth="128.0" text="Director" />
-            <TableColumn fx:id="myMovieRatingColumn" prefWidth="88.0" text="My Rating" />
-            <TableColumn fx:id="avgMovieRatingColumn" prefWidth="81.0" text="Avg. Rating" />
+          <TableColumn fx:id="movieTitleColumn" prefWidth="229.0" text="Title" />
+          <TableColumn fx:id="movieDirectorColumn" prefWidth="171.0" text="Director" />
+            <TableColumn fx:id="myMovieRatingColumn" prefWidth="83.0" text="My Rating" />
+            <TableColumn fx:id="avgMovieRatingColumn" prefWidth="89.0" text="Avg. Rating" />
         </columns>
       </TableView>
    </children>

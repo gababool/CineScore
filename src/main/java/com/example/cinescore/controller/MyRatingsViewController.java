@@ -1,12 +1,17 @@
 package com.example.cinescore.controller;
 
+import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MyRatingsViewController implements Initializable {
@@ -25,15 +30,33 @@ public class MyRatingsViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().getRatedMoviesAsList();
+        moviesTable.getItems().addAll(movies);
+        movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
+        movieDirectorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
+        avgMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
+        myMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("userRating"));
+    }
+
+    public void updateRating(ActionEvent event) {
+        Movie movie = moviesTable.getSelectionModel().getSelectedItem();
+        if (movie != null){
+            try {
+                SceneSwitcher.switchToRateMovieView(event, movie);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void goToMediaPage(ActionEvent event) {
     }
 
-    public void updateRating(ActionEvent event) {
-    }
-
     public void returnToMainPage(ActionEvent event) {
+        try {
+            SceneSwitcher.switchToMain(event);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

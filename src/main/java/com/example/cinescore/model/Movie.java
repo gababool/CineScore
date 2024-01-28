@@ -65,12 +65,14 @@ public class Movie implements Serializable {
         return movieId;
     }
 
+    // Need truncation to two decimals
     public double getAvgRating(){
         int scoreTotal = 0;
         for(int score : ratings){
             scoreTotal += score;
         }
-        return (double) scoreTotal /(ratings.size());
+        double avgRating = (double) scoreTotal /(ratings.size());
+        return avgRating;
     }
 
     public String getUserRating(){

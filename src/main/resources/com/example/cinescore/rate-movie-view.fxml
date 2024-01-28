@@ -19,7 +19,7 @@
             <Bloom />
          </effect>
       </Slider>
-      <Label fx:id="ratingFromSlider" layoutX="197.0" layoutY="362.0" prefHeight="22.0" prefWidth="7.0" stylesheets="@css/SmallItems.css" text="1">
+      <Label fx:id="ratingFromSlider" layoutX="197.0" layoutY="362.0" prefHeight="22.0" prefWidth="18.0" stylesheets="@css/SmallItems.css" text="1">
          <font>
             <Font size="16.0" />
          </font>
