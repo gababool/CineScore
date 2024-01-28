@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="More methods">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/MovieAPIService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/CineScoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/RateMovieViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/controller/RateMovieViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/data/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/CineScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/rate-movie-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinescore/rate-movie-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "movieAPI",
+    "git-widget-placeholder": "master",
     "last_directory_selection": "/Users/martinlidgren/Documents/GitHub/RatingsApp/src/main/resources/com/example/cinescore",
     "last_opened_file_path": "C:/Users/marti/Documents/API Practice",
     "list.type.of.created.stylesheet": "CSS",
