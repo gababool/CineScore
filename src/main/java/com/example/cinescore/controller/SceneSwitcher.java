@@ -74,4 +74,8 @@ public class SceneSwitcher {
         prepareScene(event, root, filepath);
     }
 
+    public static void logout(ActionEvent event){
+        stage.close();
+    }
+
 }

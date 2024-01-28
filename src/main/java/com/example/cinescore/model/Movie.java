@@ -97,13 +97,14 @@ public class Movie implements Serializable {
         return movieId;
     }
 
-    // Need truncation to two decimals
-    public double getAvgRating(){
+    public String getAvgRating(){
         int scoreTotal = 0;
         for(int score : ratings){
             scoreTotal += score;
         }
-        return (double) scoreTotal /(ratings.size());
+        double avgRating = (double) scoreTotal /(ratings.size());
+        String avgRatingString = Double.toString(avgRating);
+        return String.format(avgRatingString, "%2f");
     }
 
     public String getUserRating(){

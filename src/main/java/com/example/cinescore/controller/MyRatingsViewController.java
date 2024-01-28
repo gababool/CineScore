@@ -19,7 +19,7 @@ public class MyRatingsViewController implements Initializable {
     public TableColumn<Movie, String> movieTitleColumn;
     public TableColumn<Movie, String> movieDirectorColumn;
     public TableColumn<Movie, Integer> myMovieRatingColumn;
-    public TableColumn<Movie, Integer> avgMovieRatingColumn;
+    public TableColumn<Movie, String> avgMovieRatingColumn;
     public Button goToMediaButton;
 
     public Label titleLabel;

@@ -23,18 +23,12 @@ public class WatchlistViewController implements Initializable {
     public Label titleLabel;
     public Button goToMediaButton;
     public TableColumn<Movie, String> movieTitleColumn;
-    public TableColumn<Movie, String> movieDirectorColumn;
     public TableColumn<Movie, Integer> myMovieRatingColumn;
-    public TableColumn<Movie, Double> avgMovieRatingColumn;
+    public TableColumn<Movie, String> avgMovieRatingColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        HashSet<Movie> watchlist = UserManager.getInstance().getCurrentUser().getWatchlist();
-        moviesTable.getItems().addAll(watchlist);
-        movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
-        movieDirectorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
-        avgMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
-        myMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("userRating"));
+
     }
 
     public void goToMediaPage(ActionEvent event) {

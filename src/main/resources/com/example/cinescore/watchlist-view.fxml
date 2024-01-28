@@ -5,23 +5,154 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.WatchlistViewController">
     <children>
-        <Button fx:id="goToMediaButton" layoutX="-2.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
-        <Label fx:id="titleLabel" layoutX="32.0" layoutY="26.0" prefHeight="90.0" prefWidth="296.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
-        <Button fx:id="returnButton" layoutX="-2.0" layoutY="230.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Return" />
-        <TextField fx:id="searchField" layoutX="292.0" layoutY="455.0" prefHeight="50.0" prefWidth="478.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
-        <Button fx:id="searchButton" layoutX="770.0" layoutY="455.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" stylesheets="@css/SmallItems.css" text="Enter" />
-        <TableView fx:id="moviesTable" layoutX="292.0" layoutY="145.0" prefHeight="310.0" prefWidth="573.0" stylesheets="@css/SmallItems.css">
-            <columns>
-                <TableColumn fx:id="movieTitleColumn" prefWidth="229.0" text="Title" />
-                <TableColumn fx:id="movieDirectorColumn" prefWidth="171.0" text="Director" />
-                <TableColumn fx:id="myMovieRatingColumn" prefWidth="83.0" text="My Rating" />
-                <TableColumn fx:id="avgMovieRatingColumn" prefWidth="89.0" text="Avg. Rating" />
-            </columns>
-        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="31.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="149.0" layoutX="31.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="31.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="31.0" layoutY="313.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="31.0" layoutY="277.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <TextField fx:id="titleSearchField" layoutX="31.0" layoutY="45.0" prefHeight="46.0" prefWidth="608.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
+        <Label layoutX="15.0" layoutY="469.0" stylesheets="@css/SmallItems.css">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="searchButton" layoutX="641.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="46.0" prefWidth="229.0" stylesheets="@css/SmallItems.css" text="Enter" />
+        <Button fx:id="goToMoviePageButton" layoutX="656.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+        <Button fx:id="watchlistMenuButton1" layoutX="656.0" layoutY="427.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
+        <Button fx:id="rateMovieButton" layoutX="656.0" layoutY="276.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
+        <ImageView id="moviePoster" fx:id="moviePoster" fitHeight="300.0" fitWidth="200.0" layoutX="439.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../Pictures/interstellar-one-sheet-i23157.jpg" />
+         </image></ImageView>
+        <Label fx:id="movieTitleLabel" layoutX="38.0" layoutY="283.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Title">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="movieDirectorLabel" layoutX="38.0" layoutY="319.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Director">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="movieReleaseYearLabel" layoutX="37.0" layoutY="394.0" prefHeight="18.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="ReleaseYear">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="movieWriterLabel" layoutX="37.0" layoutY="355.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Writer">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="moviePlotLabel" alignment="TOP_LEFT" layoutX="40.0" layoutY="436.0" prefHeight="132.0" prefWidth="369.0" stylesheets="@css/SmallItems.css" text="Plot" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TableView layoutX="31.0" layoutY="107.0" prefHeight="149.0" prefWidth="838.0" stylesheets="@css/SmallItems.css">
+        <columns>
+          <TableColumn prefWidth="226.0" text="C1" />
+          <TableColumn prefWidth="319.0" text="C2" />
+            <TableColumn prefWidth="319.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="watchlistMenuButton11" layoutX="656.0" layoutY="530.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="46.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Return" />
     </children>
 
 </AnchorPane>
