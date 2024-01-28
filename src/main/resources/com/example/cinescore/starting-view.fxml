@@ -44,7 +44,7 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <Button fx:id="loginButton" layoutX="145.0" layoutY="316.0" mnemonicParsing="false" onAction="#loginUser" onKeyPressed="#handleKeyPress" prefHeight="34.0" prefWidth="120.0" stylesheets="@css/SmallItems.css" text="Login" textFill="#efbaf5">
+      <Button fx:id="loginButton" layoutX="146.0" layoutY="330.0" mnemonicParsing="false" onAction="#loginUser" onKeyPressed="#handleKeyPress" prefHeight="34.0" prefWidth="120.0" stylesheets="@css/SmallItems.css" text="Login" textFill="#efbaf5">
          <font>
             <Font name="Eras Demi ITC" size="16.0" />
          </font></Button>
@@ -54,6 +54,11 @@
          </font>
       </Label>
       <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="74.0" layoutY="250.0" onKeyPressed="#handleKeyPress" prefHeight="46.0" prefWidth="263.0" promptText="Password" stylesheets="@css/SmallItems.css" />
+      <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="305.0" prefHeight="17.0" prefWidth="263.0" text="DISPLAY MESSAGE" textFill="#ff3c3c" visible="false">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>

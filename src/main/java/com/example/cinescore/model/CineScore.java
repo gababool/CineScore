@@ -19,25 +19,33 @@ public class CineScore implements Serializable {
         return movies;
     }
 
-    public void createUser(String username, String email, String password) throws Exception {
+    public void createUser(String username, String password) throws Exception {
         if(users.containsKey(username)){throw new Exception("Username is taken");}
-        User newUser = new User(username, email, password);
+        User newUser = new User(username, password);
         users.put(username, newUser);
         DataManager.saveState(this);
     }
 
     public User loginUser(String username, String password) throws Exception {
+        if (username.isBlank()){throw new Exception("Username cannot be blank");}
+        if (password.isBlank()){throw new Exception("Password cannot be blank");}
         if(users.containsKey(username)){
             User user = users.get(username);
             if(user.getPassword().equals(password)){
                 System.out.println("Login success! Welcome " + username + "!");
                 return user;
-            } else {
-                throw new Exception("Password incorrect. Try again!");
-            }
-        } else {
-            throw new Exception("User does not exist");
-        }
+            } else {throw new Exception("Password incorrect. Try again!");}
+        } else {throw new Exception("User does not exist");}
+    }
+
+    public void changeUsername(String username) throws Exception{
+        UserManager.getInstance().getCurrentUser().setUsername(username);
+        DataManager.saveState(this);
+    }
+
+    public void changePassword(String password) throws Exception{
+        UserManager.getInstance().getCurrentUser().setPassword(password);
+        DataManager.saveState(this);
     }
 
     public void addMovieRating(String title, String director, int releaseYear, int rating){

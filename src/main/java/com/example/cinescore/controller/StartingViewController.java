@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class StartingViewController {
+    public Label messageLabel;
     @FXML private TextField usernameField;
     @FXML private TextField passwordField;
     @FXML private Button createAccountButton;
@@ -35,6 +36,8 @@ public class StartingViewController {
             SceneSwitcher.switchToMain(event);
         } catch (Exception e) {
             e.printStackTrace();
+            messageLabel.setText(e.getMessage());
+            messageLabel.setVisible(true);
         }
     }
 

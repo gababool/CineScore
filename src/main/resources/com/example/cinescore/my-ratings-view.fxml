@@ -11,11 +11,11 @@
    <children>
       <Button fx:id="goToMediaButton" layoutX="-2.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
       <Label fx:id="titleLabel" layoutX="32.0" layoutY="26.0" prefHeight="90.0" prefWidth="238.0" stylesheets="@css/LargeItems.css" text="Ratings" />
-      <Button fx:id="updateRatingButton" layoutX="-2.0" layoutY="341.0" mnemonicParsing="false" onAction="#updateRating" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
-      <Button fx:id="returnButton" layoutX="-2.0" layoutY="244.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Return" />
+      <Button fx:id="updateRatingButton" layoutX="-2.0" layoutY="249.0" mnemonicParsing="false" onAction="#updateRating" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
+      <Button fx:id="returnButton" layoutX="-2.0" layoutY="346.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Return" />
       <TextField fx:id="searchField" layoutX="292.0" layoutY="490.0" prefHeight="50.0" prefWidth="478.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
       <Button fx:id="searchButton" layoutX="770.0" layoutY="490.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" stylesheets="@css/SmallItems.css" text="Enter" />
-      <TableView fx:id="moviesTable" layoutX="292.0" layoutY="109.0" prefHeight="381.0" prefWidth="573.0" stylesheets="@css/SmallItems.css">
+      <TableView fx:id="moviesTable" layoutX="292.0" layoutY="147.0" prefHeight="343.0" prefWidth="573.0" stylesheets="@css/SmallItems.css">
         <columns>
           <TableColumn fx:id="movieTitleColumn" prefWidth="229.0" text="Title" />
           <TableColumn fx:id="movieDirectorColumn" prefWidth="171.0" text="Director" />

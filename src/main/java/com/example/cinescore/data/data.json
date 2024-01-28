@@ -1,1 +1,1 @@
-{"users":{"Martin":{"username":"Martin","password":"123","email":"martin@email.com","ratedMovies":{"interstellarchristophernolan2014":7},"reviews":{},"watchlist":[],"ratedMoviesAsList":[{"movieId":"interstellarchristophernolan2014","title":"Interstellar","director":"Christopher Nolan","releaseYear":2014,"ratings":[7],"reviews":[],"userRating":"7"
+{"users":{"Martin":{"username":"Martin1","password":"123","ratedMovies":{},"reviews":{},"watchlist":[]}},"movies":{},"name":"cineScore"}

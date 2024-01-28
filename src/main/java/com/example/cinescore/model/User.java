@@ -10,15 +10,13 @@ import java.util.LinkedHashMap;
 public class User implements Serializable {
     private String username;
     private String password;
-    private String email;
     private HashMap<String, Integer> ratedMovies;
     private HashMap<String, String> reviews;
     private ArrayList<Movie> watchlist;
 
-    public User(String username, String email, String password) throws Exception {
+    public User(String username, String password) throws Exception {
         this.username = checkUsername(username);
         this.password = checkPassword(password);
-        this.email = email;
         this.ratedMovies = new LinkedHashMap<>();
         this.reviews = new  LinkedHashMap<>();
         this.watchlist = new ArrayList<>();
@@ -34,9 +32,6 @@ public class User implements Serializable {
         return password;
     }
 
-    public String getEmail() {
-        return email;
-    }
     public void addRatedMovie(String movieId, int rating){
         ratedMovies.put(movieId, rating);
     }
@@ -55,7 +50,9 @@ public class User implements Serializable {
     public HashMap<String, Integer> getRatedMovies() {
         return ratedMovies;
     }
-    public ArrayList<Movie> getRatedMoviesAsList() {
+
+    // Cannot call this method "getRatedMoviesAsList" because of how data storage works.
+    public ArrayList<Movie> retrieveRatedMoviesAsList() {
         ArrayList<Movie> movies = new ArrayList<>();
         for (String movieId: this.ratedMovies.keySet()){
             Movie movie = CineScoreApp.getCineScore().getMovie(movieId);
@@ -81,10 +78,17 @@ public class User implements Serializable {
         if(password.isBlank()){
             throw new Exception("Password cannot be blank");
         }
-        if(username.length() > 16){
+        if(password.length() > 16){
             throw new Exception("Username length cannot exceed 16 characters");
         }
         return password;
     }
 
+    public void setUsername(String username) throws Exception {
+        this.username = checkUsername(username);
+    }
+
+    public void setPassword(String password) throws Exception {
+        this.password = checkPassword(password);
+    }
 }

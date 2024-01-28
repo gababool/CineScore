@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.WatchlistViewController">
+    <children>
+        <Button fx:id="goToMediaButton" layoutX="-2.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToMediaPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+        <Label fx:id="titleLabel" layoutX="32.0" layoutY="26.0" prefHeight="90.0" prefWidth="296.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
+        <Button fx:id="returnButton" layoutX="-2.0" layoutY="230.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="70.0" prefWidth="261.0" stylesheets="@css/SmallItems.css" text="Return" />
+        <TextField fx:id="searchField" layoutX="292.0" layoutY="455.0" prefHeight="50.0" prefWidth="478.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
+        <Button fx:id="searchButton" layoutX="770.0" layoutY="455.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" stylesheets="@css/SmallItems.css" text="Enter" />
+        <TableView fx:id="moviesTable" layoutX="292.0" layoutY="145.0" prefHeight="310.0" prefWidth="573.0" stylesheets="@css/SmallItems.css">
+            <columns>
+                <TableColumn fx:id="movieTitleColumn" prefWidth="229.0" text="Title" />
+                <TableColumn fx:id="movieDirectorColumn" prefWidth="171.0" text="Director" />
+                <TableColumn fx:id="myMovieRatingColumn" prefWidth="83.0" text="My Rating" />
+                <TableColumn fx:id="avgMovieRatingColumn" prefWidth="89.0" text="Avg. Rating" />
+            </columns>
+        </TableView>
+    </children>
+
+</AnchorPane>

@@ -64,4 +64,14 @@ public class SceneSwitcher {
         prepareScene(event, root, filepath);
     }
 
+    public static void switchToMyWatchlistView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/watchlist-view.fxml";
+        prepareScene(event, root, filepath);
+    }
+
+    public static void switchToMyAccountView(ActionEvent event) throws IOException{
+        String filepath = "/com/example/cinescore/my-account.view.fxml";
+        prepareScene(event, root, filepath);
+    }
+
 }

@@ -7,9 +7,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class CineScoreApp extends Application {
     public static CineScore cineScore;
@@ -27,6 +29,8 @@ public class CineScoreApp extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon.png")));
+        stage.getIcons().add(icon);
     }
 
     public static void main(String[] args) {

@@ -30,7 +30,7 @@ public class MyRatingsViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().getRatedMoviesAsList();
+        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().retrieveRatedMoviesAsList();
         moviesTable.getItems().addAll(movies);
         movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
         movieDirectorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
