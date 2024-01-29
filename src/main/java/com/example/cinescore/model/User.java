@@ -10,19 +10,19 @@ public class User implements Serializable {
     private String password;
     private HashMap<String, Integer> ratedMovies;
     private HashMap<String, String> reviews;
-    private HashSet<Movie> watchlist;
+    private HashMap<String, Movie> watchlist;
 
     public User(String username, String password) throws Exception {
         this.username = checkUsername(username);
         this.password = checkPassword(password);
         this.ratedMovies = new LinkedHashMap<>();
         this.reviews = new  LinkedHashMap<>();
-        this.watchlist = new HashSet<>();
+        this.watchlist = new LinkedHashMap<>();
     }
 
     public User(){}
 
-    public HashSet<Movie> getWatchlist() {
+    public HashMap<String, Movie> getWatchlist() {
         return watchlist;
     }
 
@@ -37,6 +37,7 @@ public class User implements Serializable {
     public void addRatedMovie(String movieId, int rating){
         ratedMovies.put(movieId, rating);
     }
+
     public String getMovieRating(String movieId){
         if (ratedMovies.containsKey(movieId)){
             return String.valueOf(ratedMovies.get(movieId));
@@ -46,7 +47,9 @@ public class User implements Serializable {
     }
 
     public void addMovieToWatchlist(Movie movie){
-        watchlist.add(movie);
+        if (!watchlist.containsKey(movie.getMovieId())){
+            watchlist.put(movie.getMovieId(), movie);
+        }
     }
 
     public HashMap<String, Integer> getRatedMovies() {
@@ -57,6 +60,15 @@ public class User implements Serializable {
     public ArrayList<Movie> retrieveRatedMoviesAsList() {
         ArrayList<Movie> movies = new ArrayList<>();
         for (String movieId: this.ratedMovies.keySet()){
+            Movie movie = CineScoreApp.getCineScore().getMovie(movieId);
+            movies.add(movie);
+        }
+        return movies;
+    }
+
+    public ArrayList<Movie> retrieveWatchlistAsList() {
+        ArrayList<Movie> movies = new ArrayList<>();
+        for (String movieId: this.watchlist.keySet()){
             Movie movie = CineScoreApp.getCineScore().getMovie(movieId);
             movies.add(movie);
         }

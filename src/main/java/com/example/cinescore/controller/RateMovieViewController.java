@@ -39,8 +39,15 @@ public class RateMovieViewController {
         titleField.setText(movie.getTitle());
         titleField.setEditable(false);
         directorLabel.setText(movie.getDirector());
-        releaseYearField.setText(String.valueOf(movie.getReleaseYear()));
+        releaseYearField.setText(movie.getReleaseYear());
         releaseYearField.setEditable(false);
+        try{
+            InputStream stream = new URL(movie.getPoster()).openStream();
+            Image image = new Image(stream);
+            moviePoster.setImage(image);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void rateMovie(ActionEvent event){
@@ -71,7 +78,12 @@ public class RateMovieViewController {
     public void searchMovie(ActionEvent event) {
         String title = titleField.getText().trim();
         String releaseYear = releaseYearField.getText().trim();
-        Movie movie = MovieAPIService.retrieveMovieData(title, releaseYear);
+        Movie movie = null;
+        if (releaseYear.isBlank()){
+            movie = MovieAPIService.retrieveMovieFromTitleOnly(title);
+        } else {
+            movie = MovieAPIService.retrieveMovieFromTitleAndYear(title, releaseYear);
+        }
         directorLabel.setText(movie.getDirector());
         directorLabel.setVisible(true);
         try{
