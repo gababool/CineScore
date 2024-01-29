@@ -8,6 +8,8 @@ import java.util.UUID;
 
 public class Movie implements Serializable {
 
+    private int totalRatings;
+    private int totalScore;
     private String movieId;
     private String title;
     private String director;
@@ -17,7 +19,6 @@ public class Movie implements Serializable {
     private String actors;
     private String plot;
     private String poster;
-    private ArrayList<Integer> ratings;
     private ArrayList<String> reviews;
 
     public Movie(String title, String director, String releaseYear, String writer, String runtime, String actors, String plot, String id, String poster){
@@ -30,9 +31,9 @@ public class Movie implements Serializable {
         this.plot = plot;
         this.movieId = id;
         this.poster = poster;
-        this.ratings = new ArrayList<>();
+        this.totalRatings = 0;
+        this.totalScore = 0;
         this.reviews = new ArrayList<>();
-
     }
 
     public Movie(){};
@@ -85,10 +86,6 @@ public class Movie implements Serializable {
         return releaseYear;
     }
 
-    public ArrayList<Integer> getRatings() {
-        return ratings;
-    }
-
     public ArrayList<String> getReviews() {
         return reviews;
     }
@@ -98,19 +95,8 @@ public class Movie implements Serializable {
     }
 
     public String getAvgRating(){
-        if (ratings.isEmpty()){
-            return "No user ratings exist";
-        }
-        else {
-            int scoreTotal = 0;
-            for(int score : ratings){
-                scoreTotal += score;
-            }
-            double avgRating = (double) scoreTotal /(ratings.size());
-            String avgRatingString = Double.toString(avgRating);
-            return String.format(avgRatingString, "%2f");
-        }
-
+        double avgRating = (double) totalScore / totalRatings;
+        return String.valueOf(avgRating) + " (" + totalRatings + ")";
     }
 
     public String getUserRating(){
@@ -121,21 +107,16 @@ public class Movie implements Serializable {
     public void addRatingScore(int score){
         User user = UserManager.getInstance().getCurrentUser();
         if (user.getRatedMovies().containsKey(this.movieId)){
-            int previousRating = Integer.parseInt(user.getMovieRating(this.movieId));
-            updateRatingScore(previousRating, score);
+            int previousScore = Integer.parseInt(user.getMovieRating(this.movieId));
+            totalScore -= previousScore; // BUG HERE, CAN GO BELOW ZERO!!!!!
+            totalScore += score;
         } else {
-            ratings.add(score);
+            totalScore += score;
+            totalRatings++;
         }
-    }
-
-    private void updateRatingScore(int previousScore, int newScore){
-        for (int i = 0; i < ratings.size(); i++){
-            if (ratings.get(i) == previousScore){
-                ratings.remove(ratings.get(i));
-                ratings.add(newScore);
-                break;
-            }
-        }
+        System.out.println("Total score: " + totalScore);
+        System.out.println("Total ratings: " + totalRatings);
+        System.out.println("Average Rating: " + getAvgRating());
     }
 
 }

@@ -22,10 +22,6 @@ public class User implements Serializable {
 
     public User(){}
 
-    public HashMap<String, Movie> getWatchlist() {
-        return watchlist;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -54,6 +50,10 @@ public class User implements Serializable {
 
     public HashMap<String, Integer> getRatedMovies() {
         return ratedMovies;
+    }
+
+    public HashMap<String, Movie> getWatchlist() {
+        return watchlist;
     }
 
     // Cannot call this method "getRatedMoviesAsList" because of how data storage works.

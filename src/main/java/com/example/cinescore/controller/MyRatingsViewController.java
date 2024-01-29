@@ -33,7 +33,7 @@ public class MyRatingsViewController implements Initializable {
     public Label movieWriterLabel;
     public Label moviePlotLabel;
     public TableView<Movie> ratingsTable;
-    public TableColumn<Movie, String> avgRatingColumn;
+    public TableColumn<Movie, Double> avgRatingColumn;
     public TableColumn<Movie, String> myRatingColumn;
     public TableColumn<Movie, String> movieTitleColumn;
 
