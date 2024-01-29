@@ -61,8 +61,8 @@ public class CineScore implements Serializable {
         if (!movies.containsKey(movie.getMovieId())){
             movies.put(movie.getMovieId(), movie);
         }
-        movie.addRatingScore(rating);
-        user.addRatedMovie(movie.getMovieId(), rating);
+        movies.get(movie.getMovieId()).addRatingScore(rating); // Making sure the reference is correct
+        user.addRatedMovie(movies.get(movie.getMovieId()), rating);
         DataManager.saveState(this);
     }
 
@@ -71,7 +71,7 @@ public class CineScore implements Serializable {
         if (!movies.containsKey(movie.getMovieId())){
             movies.put(movie.getMovieId(), movie);
         }
-        user.addMovieToWatchlist(movie);
+        user.addMovieToWatchlist((movies.get(movie.getMovieId())));
         DataManager.saveState(this);
     }
 

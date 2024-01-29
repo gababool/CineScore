@@ -8,7 +8,7 @@ import java.util.*;
 public class User implements Serializable {
     private String username;
     private String password;
-    private HashMap<String, Integer> ratedMovies;
+    private HashMap<Movie, Integer> ratedMovies;
     private HashMap<String, String> reviews;
     private HashMap<String, Movie> watchlist;
 
@@ -30,13 +30,13 @@ public class User implements Serializable {
         return password;
     }
 
-    public void addRatedMovie(String movieId, int rating){
-        ratedMovies.put(movieId, rating);
+    public void addRatedMovie(Movie movie, int rating){
+        ratedMovies.put(movie, rating);
     }
 
-    public String getMovieRating(String movieId){
-        if (ratedMovies.containsKey(movieId)){
-            return String.valueOf(ratedMovies.get(movieId));
+    public String getMovieRating(Movie movie){
+        if (ratedMovies.containsKey(movie)){
+            return String.valueOf(ratedMovies.get(movie));
         } else{
             return "Not rated";
         }
@@ -48,7 +48,7 @@ public class User implements Serializable {
         }
     }
 
-    public HashMap<String, Integer> getRatedMovies() {
+    public HashMap<Movie, Integer> getRatedMovies() {
         return ratedMovies;
     }
 
@@ -58,11 +58,7 @@ public class User implements Serializable {
 
     // Cannot call this method "getRatedMoviesAsList" because of how data storage works.
     public ArrayList<Movie> retrieveRatedMoviesAsList() {
-        ArrayList<Movie> movies = new ArrayList<>();
-        for (String movieId: this.ratedMovies.keySet()){
-            Movie movie = CineScoreApp.getCineScore().getMovie(movieId);
-            movies.add(movie);
-        }
+        ArrayList<Movie> movies = new ArrayList<>(this.ratedMovies.keySet());
         return movies;
     }
 

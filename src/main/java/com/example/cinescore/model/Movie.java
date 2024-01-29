@@ -102,7 +102,7 @@ public class Movie implements Serializable {
     public String getUserRating(){
         if (UserManager.getInstance().getCurrentUser() != null){
             User user = UserManager.getInstance().getCurrentUser();
-            return user.getMovieRating(this.movieId);
+            return user.getMovieRating(this);
         } else {
             System.out.println("User is null");
             return "User is currently null";
@@ -111,9 +111,9 @@ public class Movie implements Serializable {
 
     public void addRatingScore(int score) {
         User user = UserManager.getInstance().getCurrentUser();
-        if (user.getRatedMovies().containsKey(this.movieId)) {
+        if (user.getRatedMovies().containsKey(this)) {
             System.out.println("Inside condition");
-            int previousScore = Integer.parseInt(user.getMovieRating(this.movieId));
+            int previousScore = Integer.parseInt(user.getMovieRating(this));
             System.out.println("Previous score: " + previousScore);
             if (totalScore - previousScore <= 0) {
                 totalScore = 0;
