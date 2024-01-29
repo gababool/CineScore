@@ -68,6 +68,7 @@ public class MainViewController implements Initializable {
         if (currentMovie != null) {
             try {
                 SceneSwitcher.switchToRateMovieView(event, currentMovie);
+                currentMovie = null;
             } catch (IOException e) {
                 e.printStackTrace();
             }

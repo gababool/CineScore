@@ -25,22 +25,24 @@ import java.util.ResourceBundle;
 public class RateMovieViewController {
 
     public Label titleLabel;
-    public TextField titleField;
-    public TextField releaseYearField;
     public Slider slider;
     public Label ratingFromSlider;
     public Button addRatingButton;
     public Button returnButton;
-    public Button searchMovieButton;
     public ImageView moviePoster;
-    public Label directorLabel;
+    public Label movieTitleLabel;
+    public Label movieDirectorLabel;
+    public Label movieReleaseYearLabel;
+    public Label movieWriterLabel;
+    public Label moviePlotLabel;
+    public static Movie currentMovie = null;
 
     public void loadMovieInfo(Movie movie){
-        titleField.setText(movie.getTitle());
-        titleField.setEditable(false);
-        directorLabel.setText(movie.getDirector());
-        releaseYearField.setText(movie.getReleaseYear());
-        releaseYearField.setEditable(false);
+        currentMovie = movie;
+        movieTitleLabel.setText(movie.getTitle());
+        movieDirectorLabel.setText(movie.getDirector());
+        movieReleaseYearLabel.setText(movie.getReleaseYear());
+        moviePlotLabel.setText(movie.getPlot());
         try{
             InputStream stream = new URL(movie.getPoster()).openStream();
             Image image = new Image(stream);
@@ -51,12 +53,11 @@ public class RateMovieViewController {
     }
 
     public void rateMovie(ActionEvent event){
-        String title = titleField.getText().trim();
-        String releaseYear = releaseYearField.getText().trim();
         int rating = (int)slider.getValue();
         CineScore cineScore = CineScoreApp.getCineScore();
         try {
-            cineScore.addMovieRating(title, releaseYear, rating);
+            cineScore.addMovieRating(currentMovie, rating);
+            currentMovie = null;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -75,24 +76,4 @@ public class RateMovieViewController {
         }
     }
 
-    public void searchMovie(ActionEvent event) {
-        String title = titleField.getText().trim();
-        String releaseYear = releaseYearField.getText().trim();
-        Movie movie = null;
-        if (releaseYear.isBlank()){
-            movie = MovieAPIService.retrieveMovieFromTitleOnly(title);
-        } else {
-            movie = MovieAPIService.retrieveMovieFromTitleAndYear(title, releaseYear);
-        }
-        directorLabel.setText(movie.getDirector());
-        directorLabel.setVisible(true);
-        try{
-            InputStream stream = new URL(movie.getPoster()).openStream();
-            Image image = new Image(stream);
-            moviePoster.setImage(image);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
 }

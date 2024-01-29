@@ -147,7 +147,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="releaseYearSearchField" layoutX="279.0" layoutY="185.0" prefHeight="46.0" prefWidth="546.0" promptText="Release Year" stylesheets="@css/SmallItems.css" />
+      <TextField fx:id="releaseYearSearchField" layoutX="279.0" layoutY="185.0" prefHeight="46.0" prefWidth="546.0" promptText="Release Year (Optional)" stylesheets="@css/SmallItems.css" />
       <Button fx:id="goToWatchlistButton" layoutY="292.0" mnemonicParsing="false" onAction="#goToWatchlist" prefHeight="90.0" prefWidth="234.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
    </children>
 </AnchorPane>

@@ -100,23 +100,35 @@ public class Movie implements Serializable {
     }
 
     public String getUserRating(){
-        User user = UserManager.getInstance().getCurrentUser();
-        return user.getMovieRating(this.movieId);
+        if (UserManager.getInstance().getCurrentUser() != null){
+            User user = UserManager.getInstance().getCurrentUser();
+            return user.getMovieRating(this.movieId);
+        } else {
+            System.out.println("User is null");
+            return "User is currently null";
+        }
     }
 
-    public void addRatingScore(int score){
+    public void addRatingScore(int score) {
         User user = UserManager.getInstance().getCurrentUser();
-        if (user.getRatedMovies().containsKey(this.movieId)){
+        if (user.getRatedMovies().containsKey(this.movieId)) {
+            System.out.println("Inside condition");
             int previousScore = Integer.parseInt(user.getMovieRating(this.movieId));
-            totalScore -= previousScore; // BUG HERE, CAN GO BELOW ZERO!!!!!
+            System.out.println("Previous score: " + previousScore);
+            if (totalScore - previousScore <= 0) {
+                totalScore = 0;
+            } else {
+                totalScore -= previousScore;
+            }
             totalScore += score;
         } else {
             totalScore += score;
-            totalRatings++;
+            totalRatings++; // Increment totalRatings only when a new rating is added
         }
         System.out.println("Total score: " + totalScore);
         System.out.println("Total ratings: " + totalRatings);
         System.out.println("Average Rating: " + getAvgRating());
+        System.out.println("Avergate rating (by calc): " + totalScore/totalRatings);
     }
 
 }

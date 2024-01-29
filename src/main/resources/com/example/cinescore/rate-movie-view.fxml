@@ -3,33 +3,152 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="500.0" maxWidth="700.0" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.RateMovieViewController">
    <children>
-      <Label fx:id="titleLabel" layoutX="30.0" layoutY="38.0" stylesheets="@css/LargeItems.css" text="Rate Movie" />
-      <TextField fx:id="titleField" focusTraversable="false" layoutX="32.0" layoutY="163.0" prefHeight="46.0" prefWidth="332.0" promptText="Title" stylesheets="@css/SmallItems.css" />
-      <TextField fx:id="releaseYearField" focusTraversable="false" layoutX="32.0" layoutY="221.0" prefHeight="46.0" prefWidth="332.0" promptText="Release Year" stylesheets="@css/SmallItems.css" />
-      <Slider fx:id="slider" blockIncrement="1.0" layoutX="32.0" layoutY="343.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onDragDone="#updateRatingLabel" onMouseClicked="#updateRatingLabel" prefHeight="24.0" prefWidth="332.0" showTickLabels="true" snapToTicks="true" stylesheets="@css/SmallItems.css">
+      <Label fx:id="titleLabel" layoutX="34.0" layoutY="26.0" stylesheets="@css/LargeItems.css" text="Rate Movie" />
+      <Slider fx:id="slider" blockIncrement="1.0" layoutX="34.0" layoutY="422.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onDragDone="#updateRatingLabel" onMouseClicked="#updateRatingLabel" prefHeight="24.0" prefWidth="332.0" showTickLabels="true" snapToTicks="true" stylesheets="@css/SmallItems.css">
          <effect>
             <Bloom />
          </effect>
       </Slider>
-      <Label fx:id="ratingFromSlider" layoutX="192.0" layoutY="385.0" prefHeight="22.0" prefWidth="18.0" stylesheets="@css/SmallItems.css" text="1">
+      <Label fx:id="ratingFromSlider" layoutX="388.0" layoutY="422.0" prefHeight="22.0" prefWidth="18.0" stylesheets="@css/SmallItems.css" text="1">
          <font>
             <Font size="16.0" />
          </font>
          <effect>
             <Bloom />
          </effect></Label>
-      <Button fx:id="addRatingButton" layoutX="462.0" layoutY="396.0" mnemonicParsing="false" onAction="#rateMovie" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
-      <Button fx:id="returnButton" layoutX="508.0" layoutY="438.0" mnemonicParsing="false" onAction="#returnToMainView" stylesheets="@css/SmallItems.css" text="Return" />
-      <ImageView id="moviePoster" fx:id="moviePoster" fitHeight="300.0" fitWidth="200.0" layoutX="446.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="searchMovieButton" layoutX="105.0" layoutY="286.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="30.0" prefWidth="169.0" stylesheets="@css/SmallItems.css" text="Search" />
+      <Button fx:id="addRatingButton" layoutX="462.0" layoutY="381.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="45.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Add to My Ratings" />
+      <Button fx:id="returnButton" layoutX="462.0" layoutY="440.0" mnemonicParsing="false" onAction="#returnToMainView" prefHeight="30.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Return" />
+      <ImageView id="moviePoster" fx:id="moviePoster" fitHeight="300.0" fitWidth="200.0" layoutX="462.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../Pictures/interstellar-one-sheet-i23157.jpg" />
+         </image></ImageView>
       <Label fx:id="directorLabel" layoutX="446.0" layoutY="351.0" prefHeight="34.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="DIRECTOR_HERE" visible="false" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="34.0" layoutY="223.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="149.0" layoutX="34.0" layoutY="259.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="34.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="34.0" layoutY="151.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="34.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2162524312734604" green="0.04721003770828247" blue="0.32894736528396606" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.11513157933950424" blue="0.8404605388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="movieTitleLabel" layoutX="41.0" layoutY="121.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Title">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="movieDirectorLabel" layoutX="41.0" layoutY="157.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Director">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="movieReleaseYearLabel" layoutX="40.0" layoutY="232.0" prefHeight="18.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="ReleaseYear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="movieWriterLabel" layoutX="40.0" layoutY="193.0" prefHeight="25.0" prefWidth="375.0" stylesheets="@css/SmallItems.css" text="Writer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="moviePlotLabel" alignment="TOP_LEFT" layoutX="43.0" layoutY="268.0" prefHeight="132.0" prefWidth="369.0" stylesheets="@css/SmallItems.css" text="Plot" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
