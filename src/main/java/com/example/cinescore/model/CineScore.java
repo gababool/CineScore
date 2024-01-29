@@ -61,6 +61,7 @@ public class CineScore implements Serializable {
         if (!movies.containsKey(movie.getMovieId())){
             movies.put(movie.getMovieId(), movie);
         }
+        movie = movies.get(movie.getMovieId()); // Changed reference to movie, otherwise avg calc will not work
         movie.addRatingScore(rating);
         user.addRatedMovie(movie.getMovieId(), rating);
         DataManager.saveState(this);
@@ -71,6 +72,7 @@ public class CineScore implements Serializable {
         if (!movies.containsKey(movie.getMovieId())){
             movies.put(movie.getMovieId(), movie);
         }
+        movie = movies.get(movie.getMovieId()); // Changed reference to movie, otherwise avg calc will not work
         user.addMovieToWatchlist(movie);
         DataManager.saveState(this);
     }
