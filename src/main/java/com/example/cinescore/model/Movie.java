@@ -98,13 +98,19 @@ public class Movie implements Serializable {
     }
 
     public String getAvgRating(){
-        int scoreTotal = 0;
-        for(int score : ratings){
-            scoreTotal += score;
+        if (ratings.isEmpty()){
+            return "No user ratings exist";
         }
-        double avgRating = (double) scoreTotal /(ratings.size());
-        String avgRatingString = Double.toString(avgRating);
-        return String.format(avgRatingString, "%2f");
+        else {
+            int scoreTotal = 0;
+            for(int score : ratings){
+                scoreTotal += score;
+            }
+            double avgRating = (double) scoreTotal /(ratings.size());
+            String avgRatingString = Double.toString(avgRating);
+            return String.format(avgRatingString, "%2f");
+        }
+
     }
 
     public String getUserRating(){

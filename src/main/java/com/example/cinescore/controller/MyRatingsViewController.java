@@ -1,45 +1,74 @@
 package com.example.cinescore.controller;
 
 import com.example.cinescore.CineScoreApp;
+import com.example.cinescore.model.CineScore;
 import com.example.cinescore.model.Movie;
 import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MyRatingsViewController implements Initializable {
-    public TableView<Movie> moviesTable;
-    public TableColumn<Movie, String> movieTitleColumn;
-    public TableColumn<Movie, String> movieDirectorColumn;
-    public TableColumn<Movie, Integer> myMovieRatingColumn;
-    public TableColumn<Movie, String> avgMovieRatingColumn;
-    public Button goToMediaButton;
 
     public Label titleLabel;
-    public Button updateRatingButton;
     public Button returnButton;
-    public TextField searchField;
     public Button searchButton;
+    public TextField titleSearchField;
+    public Button goToMoviePageButton;
+    public Button addToWatchlistButton;
+    public Button rateMovieButton;
+    public ImageView moviePoster;
+    public Label movieTitleLabel;
+    public Label movieDirectorLabel;
+    public Label movieReleaseYearLabel;
+    public Label movieWriterLabel;
+    public Label moviePlotLabel;
+    public TableView<Movie> ratingsTable;
+    public TableColumn<Movie, String> avgRatingColumn;
+    public TableColumn<Movie, String> myRatingColumn;
+    public TableColumn<Movie, String> movieTitleColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().retrieveRatedMoviesAsList();
-        moviesTable.getItems().addAll(movies);
+        ratingsTable.getItems().addAll(movies);
         movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
-        movieDirectorColumn.setCellValueFactory(new PropertyValueFactory<>("director"));
-        avgMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
-        myMovieRatingColumn.setCellValueFactory(new PropertyValueFactory<>("userRating"));
+        avgRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
+        myRatingColumn.setCellValueFactory(new PropertyValueFactory<>("userRating"));
+
+        ratingsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldMovie, newMovie) -> {
+            if (newMovie != null) {
+                updateDisplay(newMovie);
+            }
+        });
     }
 
-    public void updateRating(ActionEvent event) {
-        Movie movie = moviesTable.getSelectionModel().getSelectedItem();
+    public void updateDisplay(Movie movie){
+        movieTitleLabel.setText(movie.getTitle());
+        movieDirectorLabel.setText("Director: "+movie.getDirector());
+        movieWriterLabel.setText("Writer(s): "+movie.getWriter());
+        movieReleaseYearLabel.setText("Release Year: "+movie.getReleaseYear());
+        moviePlotLabel.setText(movie.getPlot());
+        try {
+            InputStream stream = new URL(movie.getPoster()).openStream();
+            Image image = new Image(stream);
+            moviePoster.setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void rateMovie(ActionEvent event) {
+        Movie movie = ratingsTable.getSelectionModel().getSelectedItem();
         if (movie != null){
             try {
                 SceneSwitcher.switchToRateMovieView(event, movie);
@@ -49,14 +78,29 @@ public class MyRatingsViewController implements Initializable {
         }
     }
 
-    public void goToMediaPage(ActionEvent event) {
+    public void addToAWatchlist(ActionEvent event) {
+        Movie movie = ratingsTable.getSelectionModel().getSelectedItem();
+        if (movie != null){
+            try {
+                CineScore cineScore = CineScoreApp.getCineScore();
+                cineScore.addMovieToWatchlist(movie);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    public void returnToMainPage(ActionEvent event) {
+    public void returnToMain(ActionEvent event) {
         try {
             SceneSwitcher.switchToMain(event);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void goToMoviePage(ActionEvent event) {
+    }
+
+    public void searchMovie(ActionEvent event) {
     }
 }

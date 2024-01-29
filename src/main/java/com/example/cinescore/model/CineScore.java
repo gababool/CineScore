@@ -69,6 +69,9 @@ public class CineScore implements Serializable {
 
     public void addMovieToWatchlist(Movie movie){
         User user = UserManager.getInstance().getCurrentUser();
+        if (!movies.containsKey(movie.getMovieId())){
+            movies.put(movie.getMovieId(), movie);
+        }
         user.addMovieToWatchlist(movie);
         DataManager.saveState(this);
     }

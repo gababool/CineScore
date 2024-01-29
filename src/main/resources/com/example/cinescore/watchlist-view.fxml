@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.WatchlistViewController">
+<AnchorPane prefHeight="600.0" prefWidth="949.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.WatchlistViewController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="36.0" layoutX="31.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" width="386.0">
             <fill>
@@ -106,16 +106,15 @@
                 </LinearGradient>
             </fill>
         </Rectangle>
-        <TextField fx:id="titleSearchField" layoutX="31.0" layoutY="45.0" prefHeight="46.0" prefWidth="608.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
+        <TextField fx:id="titleSearchField" layoutX="31.0" layoutY="45.0" prefHeight="46.0" prefWidth="682.0" promptText="Search..." stylesheets="@css/SmallItems.css" />
         <Label layoutX="15.0" layoutY="469.0" stylesheets="@css/SmallItems.css">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <Button fx:id="searchButton" layoutX="641.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="46.0" prefWidth="229.0" stylesheets="@css/SmallItems.css" text="Enter" />
-        <Button fx:id="goToMoviePageButton" layoutX="656.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
-        <Button fx:id="watchlistMenuButton1" layoutX="656.0" layoutY="427.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
-        <Button fx:id="rateMovieButton" layoutX="656.0" layoutY="276.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
+        <Button fx:id="searchButton" layoutX="715.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="46.0" prefWidth="155.0" stylesheets="@css/SmallItems.css" text="Enter" />
+        <Button fx:id="goToMoviePageButton" layoutX="656.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="65.0" prefWidth="214.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+        <Button fx:id="rateMovieButton" layoutX="656.0" layoutY="276.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="65.0" prefWidth="214.0" stylesheets="@css/SmallItems.css" text="Rate Movie" />
         <ImageView id="moviePoster" fx:id="moviePoster" fitHeight="300.0" fitWidth="200.0" layoutX="439.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../../Pictures/interstellar-one-sheet-i23157.jpg" />
@@ -145,14 +144,15 @@
                 <Font size="14.0" />
             </font>
         </Label>
-      <TableView layoutX="31.0" layoutY="107.0" prefHeight="149.0" prefWidth="838.0" stylesheets="@css/SmallItems.css">
+      <TableView fx:id="watchlistTable" layoutX="31.0" layoutY="106.0" prefHeight="149.0" prefWidth="838.0" stylesheets="@css/SmallItems.css">
         <columns>
-          <TableColumn prefWidth="226.0" text="C1" />
-          <TableColumn prefWidth="319.0" text="C2" />
-            <TableColumn prefWidth="319.0" text="C2" />
+          <TableColumn fx:id="movieTitleColumn" prefWidth="496.0" text="Title" />
+            <TableColumn fx:id="avgRatingColumn" editable="false" prefWidth="170.0" resizable="false" text="Average Rating" />
+          <TableColumn fx:id="myRatingColumn" prefWidth="170.0" resizable="false" text="My Rating" />
         </columns>
       </TableView>
-      <Button fx:id="watchlistMenuButton11" layoutX="656.0" layoutY="530.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="46.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Return" />
+      <Button fx:id="removeFromWatchlistButton" layoutX="656.0" layoutY="427.0" mnemonicParsing="false" onAction="#removeFromWatchlist" prefHeight="65.0" prefWidth="214.0" stylesheets="@css/SmallItems.css" text="Remove from Watchlist" />
+      <Button fx:id="returnButton" layoutX="656.0" layoutY="530.0" mnemonicParsing="false" onAction="#returnToMainPage" prefHeight="46.0" prefWidth="214.0" stylesheets="@css/SmallItems.css" text="Return" />
     </children>
 
 </AnchorPane>

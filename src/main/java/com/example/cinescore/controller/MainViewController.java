@@ -26,10 +26,9 @@ public class MainViewController implements Initializable {
     public Label titleLabel;
     public Button myAccountButton;
     public Button myRatingsMenuButton;
-    public Button watchlistMenuButton;
     public Button searchButton;
     public Button goToMoviePageButton;
-    public Button watchlistMenuButton1;
+    public Button goToWatchlistButton;
     public Button rateMovieButton;
     public Button logoutButton;
     public TextField titleSearchField;
@@ -41,6 +40,7 @@ public class MainViewController implements Initializable {
     public TextField releaseYearSearchField;
     public ImageView moviePoster;
     public static Movie currentMovie = null;
+    public Button watchlistMenuButton1;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -84,13 +84,10 @@ public class MainViewController implements Initializable {
     public void goToMoviePage(ActionEvent event) {
     }
 
-    public void updateTableFromSearch(ActionEvent event) {
-    }
-
     public void goToWatchlist(ActionEvent event) {
-        try {
+        try{
             SceneSwitcher.switchToMyWatchlistView(event);
-        } catch (IOException e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

@@ -116,7 +116,6 @@
          </font>
       </Label>
       <Button fx:id="myRatingsMenuButton" layoutY="186.0" mnemonicParsing="false" onAction="#goToMyRatings" prefHeight="90.0" prefWidth="234.0" stylesheets="@css/LargeItems.css" text="My Ratings" />
-      <Button fx:id="watchlistMenuButton" layoutY="292.0" mnemonicParsing="false" onAction="#goToWatchlist" prefHeight="90.0" prefWidth="234.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
       <Button fx:id="searchButton" layoutX="825.0" layoutY="130.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="103.0" prefWidth="77.0" stylesheets="@css/SmallItems.css" text="Enter" />
       <Button fx:id="goToMoviePageButton" layoutX="692.0" layoutY="546.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="30.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
       <Button fx:id="watchlistMenuButton1" layoutX="279.0" layoutY="546.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="30.0" prefWidth="177.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
@@ -149,5 +148,6 @@
          </font>
       </Label>
       <TextField fx:id="releaseYearSearchField" layoutX="279.0" layoutY="185.0" prefHeight="46.0" prefWidth="546.0" promptText="Release Year" stylesheets="@css/SmallItems.css" />
+      <Button fx:id="goToWatchlistButton" layoutY="292.0" mnemonicParsing="false" onAction="#goToWatchlist" prefHeight="90.0" prefWidth="234.0" stylesheets="@css/LargeItems.css" text="Watchlist" />
    </children>
 </AnchorPane>
