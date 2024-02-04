@@ -86,6 +86,10 @@
     -fx-background-color: #eb2fb9;
 }
 
-
+.list-view {
+    -fx-text-fill: #2E0854;
+    -fx-font-family: "Tahoma";
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #370c54 0.0%, #eb1dd6 100.0%);
+}
 
 .root { -fx-focus-color: transparent; }

@@ -16,7 +16,7 @@ public class User implements Serializable {
         this.username = checkUsername(username);
         this.password = checkPassword(password);
         this.ratedMovies = new LinkedHashMap<>();
-        this.reviews = new  LinkedHashMap<>();
+        this.reviews = new HashMap<>();
         this.watchlist = new LinkedHashMap<>();
     }
 
@@ -104,5 +104,9 @@ public class User implements Serializable {
 
     public void setPassword(String password) throws Exception {
         this.password = checkPassword(password);
+    }
+
+    public void addReview(Movie movie, String text){
+        reviews.put(movie.getMovieId(), text);
     }
 }

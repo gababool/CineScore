@@ -113,9 +113,9 @@
             </font>
         </Label>
         <Button fx:id="searchButton" layoutX="641.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchMovie" prefHeight="46.0" prefWidth="229.0" stylesheets="@css/SmallItems.css" text="Enter" />
-        <Button fx:id="goToMoviePageButton" layoutX="656.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
-        <Button fx:id="addToWatchlistButton" layoutX="656.0" layoutY="427.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
-        <Button fx:id="rateMovieButton" layoutX="656.0" layoutY="276.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="65.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
+        <Button fx:id="goToMoviePageButton" layoutX="656.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToMoviePage" prefHeight="65.0" prefWidth="213.0" stylesheets="@css/SmallItems.css" text="Go to Movie Page" />
+        <Button fx:id="addToWatchlistButton" layoutX="656.0" layoutY="427.0" mnemonicParsing="false" onAction="#addToAWatchlist" prefHeight="65.0" prefWidth="213.0" stylesheets="@css/SmallItems.css" text="Add to Watchlist" />
+        <Button fx:id="rateMovieButton" layoutX="656.0" layoutY="276.0" mnemonicParsing="false" onAction="#rateMovie" prefHeight="65.0" prefWidth="213.0" stylesheets="@css/SmallItems.css" text="Update Rating" />
         <ImageView id="moviePoster" fx:id="moviePoster" fitHeight="300.0" fitWidth="200.0" layoutX="439.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../../../../../../../Pictures/interstellar-one-sheet-i23157.jpg" />
@@ -152,6 +152,6 @@
                 <TableColumn fx:id="myRatingColumn" editable="false" prefWidth="170.0" resizable="false" text="My Rating" />
             </columns>
         </TableView>
-        <Button fx:id="returnButton" layoutX="656.0" layoutY="530.0" mnemonicParsing="false" onAction="#returnToMain" prefHeight="46.0" prefWidth="200.0" stylesheets="@css/SmallItems.css" text="Return" />
+        <Button fx:id="returnButton" layoutX="656.0" layoutY="530.0" mnemonicParsing="false" onAction="#returnToMain" prefHeight="46.0" prefWidth="213.0" stylesheets="@css/SmallItems.css" text="Return" />
     </children>
 </AnchorPane>

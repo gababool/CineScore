@@ -81,7 +81,15 @@ public class CineScore implements Serializable {
         return movies.get(id);
     }
 
-
+    public void addMovieReview(Movie movie, String text) throws Exception {
+        User user = UserManager.getInstance().getCurrentUser();
+        Movie toBeReviewed = movies.get(movie.getMovieId());
+        String ratingScore = user.getMovieRating(movie.getMovieId());
+        if (ratingScore.equals("Not rated"))
+            throw new Exception("Movie must be rated before a review can be added");
+        toBeReviewed.addReview(user, ratingScore, text);
+        user.addReview(toBeReviewed, text);
+    }
 
 
 

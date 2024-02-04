@@ -46,17 +46,20 @@ public class SceneSwitcher {
         prepareScene(event,  filepath);
     }
 
-    public static void switchToRateMovieView(ActionEvent event) throws IOException{
-        String filepath = "/com/example/cinescore/rate-movie-view.fxml";
-        prepareScene(event,  filepath);
-    }
-
     public static void switchToRateMovieView(ActionEvent event, Movie movie) throws IOException{
         String filepath = "/com/example/cinescore/rate-movie-view.fxml";
         prepareScene(event,  filepath);
 
         RateMovieViewController rateMovieViewController = fxmlLoader.getController();
         rateMovieViewController.loadMovieInfo(movie);
+    }
+
+    public static void switchToMoviePage(ActionEvent event, Movie movie) throws IOException{
+        String filepath = "/com/example/cinescore/rate-movie-view.fxml";
+        prepareScene(event,  filepath);
+
+        MoviePageViewController moviePageViewController = fxmlLoader.getController();
+        moviePageViewController.loadMovieInfo(movie);
     }
 
     public static void switchToMyRatingsView(ActionEvent event) throws IOException{

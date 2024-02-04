@@ -2,6 +2,7 @@ package com.example.cinescore.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -19,7 +20,7 @@ public class Movie implements Serializable {
     private String actors;
     private String plot;
     private String poster;
-    private ArrayList<String> reviews;
+    private HashMap<String, String> reviews;
 
     public Movie(String title, String director, String releaseYear, String writer, String runtime, String actors, String plot, String id, String poster){
         this.title = title;
@@ -33,7 +34,7 @@ public class Movie implements Serializable {
         this.poster = poster;
         this.totalRatings = 0;
         this.totalScore = 0;
-        this.reviews = new ArrayList<>();
+        this.reviews = new HashMap<>();
     }
 
     public Movie(){};
@@ -86,7 +87,7 @@ public class Movie implements Serializable {
         return releaseYear;
     }
 
-    public ArrayList<String> getReviews() {
+    public HashMap<String, String> getReviews() {
         return reviews;
     }
 
@@ -125,10 +126,12 @@ public class Movie implements Serializable {
             totalScore += score;
             totalRatings++; // Increment totalRatings only when a new rating is added
         }
-        System.out.println("Total score: " + totalScore);
-        System.out.println("Total ratings: " + totalRatings);
-        System.out.println("Average Rating: " + getAvgRating());
-        System.out.println("Avergate rating (by calc): " + totalScore/totalRatings);
+    }
+
+    public void addReview(User user, String ratingScore, String text){
+        String lineSeparator = System.lineSeparator();
+        String review = "User "+ user.getUsername()+": " + ratingScore+"/10" + lineSeparator + text;
+        reviews.put(user.getUsername(), review);
     }
 
 }

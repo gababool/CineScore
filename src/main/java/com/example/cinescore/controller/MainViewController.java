@@ -83,6 +83,11 @@ public class MainViewController implements Initializable {
     }
 
     public void goToMoviePage(ActionEvent event) {
+        try {
+            SceneSwitcher.switchToMoviePage(event, currentMovie);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void goToWatchlist(ActionEvent event) {
