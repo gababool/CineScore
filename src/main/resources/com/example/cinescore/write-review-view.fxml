@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.cinescore.controller.WriteReviewViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@css/Backgrounds.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cinescore.controller.WriteReviewViewController">
+   <children>
+      <TextArea fx:id="reviewText" layoutX="36.0" layoutY="33.0" prefHeight="458.0" prefWidth="484.0" promptText="Write a Review..." stylesheets="@css/LargeItems.css" wrapText="true">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextArea>
+      <ImageView fx:id="moviePoster" fitHeight="458.0" fitWidth="334.0" layoutX="555.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="addReviewButton" layoutX="36.0" layoutY="491.0" mnemonicParsing="false" onAction="#addReview" prefHeight="36.0" prefWidth="334.0" stylesheets="@css/SmallItems.css" text="Add Review" />
+      <Button fx:id="cancelButton" layoutX="423.0" layoutY="491.0" mnemonicParsing="false" onAction="#cancelReview" prefHeight="36.0" prefWidth="97.0" stylesheets="@css/SmallItems.css" text="Cancel" />
+   </children>
 </AnchorPane>

@@ -3,6 +3,10 @@ package com.example.cinescore.controller;
 import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.CineScore;
 import com.example.cinescore.model.Movie;
+import com.example.cinescore.model.User;
+import com.example.cinescore.model.UserManager;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,6 +17,7 @@ import javafx.scene.image.ImageView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.HashMap;
 
 public class MoviePageViewController {
 
@@ -34,6 +39,7 @@ public class MoviePageViewController {
         currentMovie = movie;
         movieTitleLabel.setText(movie.getTitle());
         movieDirectorLabel.setText(movie.getDirector());
+        movieWriterLabel.setText(movie.getWriter());
         movieReleaseYearLabel.setText(movie.getReleaseYear());
         moviePlotLabel.setText(movie.getPlot());
         try{
@@ -43,6 +49,13 @@ public class MoviePageViewController {
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        HashMap<String, String> reviewsMap = currentMovie.getReviews();
+        ObservableList<String> reviews = FXCollections.observableArrayList(reviewsMap.values());
+        reviewsListView.setItems(reviews);
+
+        // Review strings do not wrap in the cells. Cannot be fixed with CSS seemingly.
+        // Strings need to be converted to type Text somehow...
     }
 
     public void returnToMain(ActionEvent event) {
@@ -72,6 +85,10 @@ public class MoviePageViewController {
     }
 
     public void addReview(ActionEvent event) {
-        // Go to write review page
+        try {
+            SceneSwitcher.switchToWriteReviewView(event, currentMovie);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

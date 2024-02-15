@@ -36,6 +36,7 @@ public class MyRatingsViewController implements Initializable {
     public TableColumn<Movie, Double> avgRatingColumn;
     public TableColumn<Movie, String> myRatingColumn;
     public TableColumn<Movie, String> movieTitleColumn;
+    public Movie currentMovie = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -47,7 +48,8 @@ public class MyRatingsViewController implements Initializable {
 
         ratingsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldMovie, newMovie) -> {
             if (newMovie != null) {
-                updateDisplay(newMovie);
+                currentMovie = newMovie;
+                updateDisplay(currentMovie);
             }
         });
     }
@@ -99,6 +101,11 @@ public class MyRatingsViewController implements Initializable {
     }
 
     public void goToMoviePage(ActionEvent event) {
+        try {
+            SceneSwitcher.switchToMoviePage(event, currentMovie);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void searchMovie(ActionEvent event) {

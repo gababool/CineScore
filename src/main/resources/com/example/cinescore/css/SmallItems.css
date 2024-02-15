@@ -90,6 +90,24 @@
     -fx-text-fill: #2E0854;
     -fx-font-family: "Tahoma";
     -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #370c54 0.0%, #eb1dd6 100.0%);
+    -fx-text-wrap: true;
+    -fx-fit-to-width: true;
+}
+
+.list-cell{
+    -fx-text-wrap: true;
+    -fx-fit-to-width: true;
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 13px;
+    -fx-text-fill: #efbaf5;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: #2E0854;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: #4B0082;
 }
 
 .root { -fx-focus-color: transparent; }

@@ -55,7 +55,7 @@ public class SceneSwitcher {
     }
 
     public static void switchToMoviePage(ActionEvent event, Movie movie) throws IOException{
-        String filepath = "/com/example/cinescore/rate-movie-view.fxml";
+        String filepath = "/com/example/cinescore/moviePageView.fxml";
         prepareScene(event,  filepath);
 
         MoviePageViewController moviePageViewController = fxmlLoader.getController();
@@ -75,6 +75,14 @@ public class SceneSwitcher {
     public static void switchToMyAccountView(ActionEvent event) throws IOException{
         String filepath = "/com/example/cinescore/my-account.view.fxml";
         prepareScene(event,  filepath);
+    }
+
+    public static void switchToWriteReviewView(ActionEvent event, Movie movie) throws IOException{
+        String filepath = "/com/example/cinescore/write-review-view.fxml";
+        prepareScene(event, filepath);
+
+        WriteReviewViewController writeReviewViewController = fxmlLoader.getController();
+        writeReviewViewController.loadMovieInfo(movie);
     }
 
     public static void logout(ActionEvent event){
