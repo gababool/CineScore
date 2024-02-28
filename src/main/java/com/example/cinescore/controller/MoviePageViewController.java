@@ -13,6 +13,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,7 +31,7 @@ public class MoviePageViewController {
     public Label movieReleaseYearLabel;
     public Label movieWriterLabel;
     public Label moviePlotLabel;
-    public ListView<String> reviewsListView;
+    public ListView<Text> reviewsListView;
     public Button returnButton;
     public Button addToWatchlistButton;
     public Button rateMovieButton;
@@ -50,12 +53,14 @@ public class MoviePageViewController {
             e.printStackTrace();
         }
 
-        HashMap<String, String> reviewsMap = currentMovie.getReviews();
-        ObservableList<String> reviews = FXCollections.observableArrayList(reviewsMap.values());
+        ObservableList<Text> reviews = FXCollections.observableArrayList();
+        for (String reviewString : movie.getReviews().values()) {
+            Text reviewText = new Text(reviewString);
+            reviewText.setWrappingWidth(reviewsListView.getWidth() - 40);
+            reviewText.setFill(Color.web("#efbaf5")); // Could not be done in CSS
+            reviews.add(reviewText);
+        }
         reviewsListView.setItems(reviews);
-
-        // Review strings do not wrap in the cells. Cannot be fixed with CSS seemingly.
-        // Strings need to be converted to type Text somehow...
     }
 
     public void returnToMain(ActionEvent event) {

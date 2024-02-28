@@ -34,7 +34,7 @@
 .table-view {
     -fx-text-fill: #2E0854;
     -fx-font-family: "Tahoma";
-    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eb2fb9 0.0%, #efbaf5 100.0%);
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #370c54 0.0%, #9e1f93 100.0%);
 }
 
 .table-view .column-header {
@@ -86,15 +86,15 @@
     -fx-background-color: #eb2fb9;
 }
 
+
 .list-view {
-    -fx-text-fill: #2E0854;
-    -fx-font-family: "Tahoma";
-    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #370c54 0.0%, #eb1dd6 100.0%);
+    -fx-text-fill: #efbaf5;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #370c54 0.0%, #9e1f93 100.0%);
     -fx-text-wrap: true;
     -fx-fit-to-width: true;
 }
 
-.list-cell{
+.list-cell {
     -fx-text-wrap: true;
     -fx-fit-to-width: true;
     -fx-font-family: "Tahoma";
@@ -104,10 +104,15 @@
 
 .list-view .list-cell:odd {
     -fx-background-color: #2E0854;
+    -fx-text-fill: #efbaf5;
+    -fx-font-family: "Tahoma";
+
 }
 
 .list-view .list-cell:even {
     -fx-background-color: #4B0082;
+    -fx-text-fill: #efbaf5;
+    -fx-font-family: "Tahoma";
 }
 
 .root { -fx-focus-color: transparent; }
