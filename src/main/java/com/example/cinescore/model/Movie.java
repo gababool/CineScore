@@ -8,9 +8,6 @@ import java.util.UUID;
 
 
 public class Movie implements Serializable {
-
-    private int totalRatings;
-    private int totalScore;
     private String movieId;
     private String title;
     private String director;
@@ -20,7 +17,6 @@ public class Movie implements Serializable {
     private String actors;
     private String plot;
     private String poster;
-    private HashMap<String, String> reviews;
 
     public Movie(String title, String director, String releaseYear, String writer, String runtime, String actors, String plot, String id, String poster){
         this.title = title;
@@ -32,12 +28,7 @@ public class Movie implements Serializable {
         this.plot = plot;
         this.movieId = id;
         this.poster = poster;
-        this.totalRatings = 0;
-        this.totalScore = 0;
-        this.reviews = new HashMap<>();
     }
-
-    public Movie(){};
 
     @Override
     public boolean equals(Object o) {
@@ -87,51 +78,44 @@ public class Movie implements Serializable {
         return releaseYear;
     }
 
-    public HashMap<String, String> getReviews() {
-        return reviews;
-    }
-
     public String getMovieId() {
         return movieId;
     }
 
-    public String getAvgRating(){
-        double avgRating = (double) totalScore / totalRatings;
-        return String.valueOf(avgRating) + " (" + totalRatings + ")";
+    public String getUserRating(String username){
+        // Use DAO method
+        return "";
     }
 
-    public String getUserRating(){
-        if (UserManager.getInstance().getCurrentUser() != null){
-            User user = UserManager.getInstance().getCurrentUser();
-            return user.getMovieRating(this.movieId);
-        } else {
-            System.out.println("User is null");
-            return "User is currently null";
-        }
+    public String getUserReview(String username){
+        // Use DAO method
+        return "";
     }
 
-    public void addRatingScore(int score) {
-        User user = UserManager.getInstance().getCurrentUser();
-        if (user.getRatedMovies().containsKey(this.movieId)) {
-            System.out.println("Inside condition");
-            int previousScore = Integer.parseInt(user.getMovieRating(this.movieId));
-            System.out.println("Previous score: " + previousScore);
-            if (totalScore - previousScore <= 0) {
-                totalScore = 0;
-            } else {
-                totalScore -= previousScore;
-            }
-            totalScore += score;
-        } else {
-            totalScore += score;
-            totalRatings++; // Increment totalRatings only when a new rating is added
-        }
+    public String getAllReviews(){
+        return "";
     }
 
-    public void addReview(User user, String ratingScore, String text){
-        String lineSeparator = System.lineSeparator();
-        String review = "User "+ user.getUsername()+": " + ratingScore+"/10" + lineSeparator + text;
-        reviews.put(user.getUsername(), review);
+    public double getAvgRating(){
+        // Use DAO method
+        return 1;
+    }
+
+    public int getTotalRatings(){
+        // Use DAO method
+        return 1;
+    }
+
+    public void addNewRating(int score) {
+        // Use DAO method
+    }
+
+    public void addToWatchlist(){
+        // Use DAO method
+    }
+
+    public void addReview(String text){
+        // Use DAO method
     }
 
 }

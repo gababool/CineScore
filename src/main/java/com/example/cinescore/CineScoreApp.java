@@ -1,7 +1,6 @@
 package com.example.cinescore;
 
 import com.example.cinescore.model.CineScore;
-import com.example.cinescore.model.DataManager;
 import com.example.cinescore.model.UserManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -34,8 +33,7 @@ public class CineScoreApp extends Application {
     }
 
     public static void main(String[] args) {
-        cineScore = DataManager.loadState();
-        //cineScore = new CineScore("cineScore");
+        cineScore = new CineScore();
         UserManager.getInstance();
         launch();
     }

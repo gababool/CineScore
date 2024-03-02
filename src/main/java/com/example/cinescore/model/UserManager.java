@@ -13,11 +13,12 @@ public class UserManager {
         return instance;
     }
 
-    public User getCurrentUser() {
-        return currentUser;
-    }
+    public User getCurrentUser() {return currentUser;}
 
     public void setCurrentUser(User user) {
         this.currentUser = user;
     }
+
+    public void removeCurrentUser() {this.currentUser = null;}
+
 }

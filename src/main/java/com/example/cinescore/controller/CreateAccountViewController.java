@@ -2,16 +2,12 @@ package com.example.cinescore.controller;
 
 import com.example.cinescore.CineScoreApp;
 import com.example.cinescore.model.CineScore;
-import com.example.cinescore.model.DataManager;
-import com.example.cinescore.model.User;
-import com.example.cinescore.model.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 
 import java.io.IOException;
 
