@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3640ba-9703-42c0-a9f2-bd7274702dfa" name="Changes" comment="More methods">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DatabaseUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinescore/model/DatabaseUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +122,7 @@
       <workItem from="1708533536489" duration="625000" />
       <workItem from="1708950324995" duration="67000" />
       <workItem from="1709154161827" duration="2815000" />
-      <workItem from="1709383988502" duration="5864000" />
+      <workItem from="1709383988502" duration="7199000" />
     </task>
     <task id="LOCAL−00001" summary="More methods">
       <option name="closed" value="true" />
