@@ -3,6 +3,7 @@ module com.example.cinescore {
     requires javafx.fxml;
     requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
+    requires java.sql;
 
     opens com.example.cinescore to javafx.fxml;
     exports com.example.cinescore;
