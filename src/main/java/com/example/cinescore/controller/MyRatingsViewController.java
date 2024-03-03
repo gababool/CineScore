@@ -40,7 +40,7 @@ public class MyRatingsViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().retrieveRatedMoviesAsList();
+        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().getRatedMovies();
         ratingsTable.getItems().addAll(movies);
         movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
         avgRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
@@ -85,7 +85,7 @@ public class MyRatingsViewController implements Initializable {
         if (movie != null){
             try {
                 CineScore cineScore = CineScoreApp.getCineScore();
-                cineScore.addMovieToWatchlist(movie);
+                movie.addToWatchlist();
             } catch (Exception e) {
                 e.printStackTrace();
             }

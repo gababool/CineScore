@@ -33,7 +33,7 @@ public class MyAccountViewController implements Initializable {
         CineScore cineScore = CineScoreApp.getCineScore();
         if (!usernameField.getText().equals(user.getUsername())){
             try {
-                cineScore.changeUsername(usernameField.getText().trim());
+                user.setUsername(usernameField.getText().trim());
             } catch (Exception e) {
                 e.printStackTrace();
                 messageLabel.setText(e.getMessage());
@@ -42,7 +42,7 @@ public class MyAccountViewController implements Initializable {
         }
         else if (!passwordField.getText().equals(user.getUsername())){
             try {
-                cineScore.changePassword(passwordField.getText().trim());
+                user.setPassword(passwordField.getText().trim());
             } catch (Exception e) {
                 e.printStackTrace();
                 messageLabel.setText(e.getMessage());

@@ -32,8 +32,10 @@ public class StartingViewController {
         try {
             CineScore cineScore = CineScoreApp.getCineScore();
             User currentUser = cineScore.loginUser(username, password);
-            UserManager.getInstance().setCurrentUser(currentUser);
-            SceneSwitcher.switchToMain(event);
+            if (currentUser != null){
+                UserManager.getInstance().setCurrentUser(currentUser);
+                SceneSwitcher.switchToMain(event);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             messageLabel.setText(e.getMessage());

@@ -56,7 +56,7 @@ public class RateMovieViewController {
         int rating = (int)slider.getValue();
         CineScore cineScore = CineScoreApp.getCineScore();
         try {
-            cineScore.addMovieRating(currentMovie, rating);
+            currentMovie.addNewRating(rating);
             currentMovie = null;
         } catch (Exception e) {
             e.printStackTrace();

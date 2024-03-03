@@ -54,7 +54,7 @@ public class MoviePageViewController {
         }
 
         ObservableList<Text> reviews = FXCollections.observableArrayList();
-        for (String reviewString : movie.getReviews().values()) {
+        for (String reviewString : movie.getAllReviews()) {
             Text reviewText = new Text(reviewString);
             reviewText.setWrappingWidth(reviewsListView.getWidth() - 40);
             reviewText.setFill(Color.web("#efbaf5")); // Could not be done in CSS
@@ -74,7 +74,7 @@ public class MoviePageViewController {
     public void addToAWatchlist(ActionEvent event) {
         CineScore cineScore = CineScoreApp.getCineScore();
         if (currentMovie != null) {
-            cineScore.addMovieToWatchlist(currentMovie);
+            currentMovie.addToWatchlist();
         }
     }
 

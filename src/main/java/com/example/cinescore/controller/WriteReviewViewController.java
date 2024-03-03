@@ -35,7 +35,7 @@ public class WriteReviewViewController {
     public void addReview(ActionEvent event) {
         CineScore cineScore = CineScoreApp.getCineScore();
         try {
-            cineScore.addMovieReview(currentMovie, reviewText.getText());
+            currentMovie.addReview(reviewText.getText().trim());
         } catch (Exception e) {
             e.printStackTrace();
         }

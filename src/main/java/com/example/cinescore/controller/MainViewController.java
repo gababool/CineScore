@@ -78,7 +78,7 @@ public class MainViewController implements Initializable {
     public void addToAWatchlist(ActionEvent event) {
         CineScore cineScore = CineScoreApp.getCineScore();
         if (currentMovie != null) {
-            cineScore.addMovieToWatchlist(currentMovie);
+            currentMovie.addToWatchlist();
         }
     }
 

@@ -1,6 +1,7 @@
 package com.example.cinescore;
 
 import com.example.cinescore.model.CineScore;
+import com.example.cinescore.model.DatabaseUtil;
 import com.example.cinescore.model.UserManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

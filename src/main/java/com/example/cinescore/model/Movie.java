@@ -92,8 +92,8 @@ public class Movie implements Serializable {
         return "";
     }
 
-    public String getAllReviews(){
-        return "";
+    public ArrayList<String> getAllReviews(){
+        return new ArrayList<>();
     }
 
     public double getAvgRating(){

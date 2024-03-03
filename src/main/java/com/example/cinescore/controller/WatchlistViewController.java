@@ -37,7 +37,7 @@ public class WatchlistViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().retrieveWatchlistAsList();
+        ArrayList<Movie> movies = UserManager.getInstance().getCurrentUser().getWatchlistedMovies();
         watchlistTable.getItems().addAll(movies);
         movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("fullTitle"));
         avgRatingColumn.setCellValueFactory(new PropertyValueFactory<>("avgRating"));
